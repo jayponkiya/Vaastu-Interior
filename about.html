@@ -100,7 +100,30 @@
         "name": "About Vastu Interior",
         "mainEntity": {
           "@id": "https://vaastuinterior.in/#business"
+        },
+        "mentions": {
+          "@id": "https://vaastuinterior.in/about#founder"
         }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://vaastuinterior.in/about#founder",
+        "name": "Rutvik Virani",
+        "honorificPrefix": "Er.",
+        "jobTitle": "Founder and Director",
+        "image": "https://vaastuinterior.in/assets/img/about/rutvik-virani-founder-vastu-interior-768.webp",
+        "url": "https://vaastuinterior.in/about#founder",
+        "worksFor": {
+          "@id": "https://vaastuinterior.in/#business"
+        },
+        "knowsAbout": [
+          "Interior design",
+          "Space planning",
+          "3D visualization",
+          "Turnkey interior execution",
+          "Modular furniture",
+          "Cost estimation"
+        ]
       }
     ]
   }
@@ -271,38 +294,32 @@
       </div>
     </section>
 
-    <!-- 05 Team: TEAM PLACEHOLDER. Replace these role cards with real names,
-         photos (WebP, 4:5) and short bios once the client supplies them. -->
-    <section class="section" aria-labelledby="team-title">
-      <div class="container">
-        <div class="section-head">
-          <div class="flow">
-            <p class="eyebrow"><span class="eyebrow__num">05</span> Team</p>
-            <h2 id="team-title" data-split>The people on your project</h2>
+    <!-- 05 Founder: photo and introduction supplied by the client. -->
+    <section class="section" id="founder" aria-labelledby="founder-title">
+      <div class="container founder">
+        <div class="founder__media">
+          <div class="media media--portrait" data-reveal="mask">
+            <img src="/assets/img/about/rutvik-virani-founder-vastu-interior-768.webp"
+                 srcset="/assets/img/about/rutvik-virani-founder-vastu-interior-480.webp 480w, /assets/img/about/rutvik-virani-founder-vastu-interior-768.webp 768w, /assets/img/about/rutvik-virani-founder-vastu-interior-1086.webp 1086w"
+                 sizes="(min-width: 1200px) 34vw, (min-width: 768px) 45vw, 92vw" width="1086" height="1448"
+                 alt="Er. Rutvik Virani, founder and director of Vastu Interior"
+                 loading="lazy" decoding="async">
           </div>
-          <p class="text-muted" data-reveal="fade-up">Profiles and photos of our team are on their way. Until then, here is who you will work with.</p>
         </div>
-        <div class="team" data-reveal="stagger">
-          <article class="team-card">
-            <div class="team-card__photo"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M8 42c2-9 8.5-14 16-14s14 5 16 14"/></svg></div>
-            <h3 class="team-card__role">Principal interior designer</h3>
-            <p>Leads every brief, signs off layouts and stays your main point of contact from first visit to handover.</p>
-          </article>
-          <article class="team-card">
-            <div class="team-card__photo"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M8 42c2-9 8.5-14 16-14s14 5 16 14"/></svg></div>
-            <h3 class="team-card__role">3D visualiser</h3>
-            <p>Builds the 3D views of each room with your actual materials so you can approve, or change, before work starts.</p>
-          </article>
-          <article class="team-card">
-            <div class="team-card__photo"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M8 42c2-9 8.5-14 16-14s14 5 16 14"/></svg></div>
-            <h3 class="team-card__role">Site supervisor</h3>
-            <p>Runs the site day to day, coordinates carpenters, electricians and painters, and checks work against the drawings.</p>
-          </article>
-          <article class="team-card">
-            <div class="team-card__photo"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="24" cy="17" r="8"/><path d="M8 42c2-9 8.5-14 16-14s14 5 16 14"/></svg></div>
-            <h3 class="team-card__role">Estimation &amp; procurement</h3>
-            <p>Prepares the itemised estimate, orders materials and keeps costs tied to what you approved.</p>
-          </article>
+        <div class="founder__text">
+          <p class="eyebrow"><span class="eyebrow__num">05</span> Founder</p>
+          <h2 class="founder__name" id="founder-title" data-split>Er. Rutvik Virani</h2>
+          <p class="founder__role" data-reveal="fade">Founder &amp; Director</p>
+          <div class="prose founder__bio" data-reveal="fade-up">
+            <p>Er. Rutvik Virani is the Founder and Director of Vastu Interior, a professional interior design and turnkey execution firm specializing in residential and commercial projects. With over 4 years of experience in the interior design industry, he brings together creative vision, technical expertise and strategic project management to transform spaces into thoughtfully designed, functional and aesthetically refined environments.</p>
+            <p>Under his leadership, Vastu Interior delivers comprehensive solutions encompassing space planning, interior design, 2D and 3D visualization, technical and working drawings, customized furniture, modular solutions, cost estimation, material selection and complete project execution.</p>
+            <p>Driven by a commitment to design excellence, quality craftsmanship, innovation and client satisfaction, he focuses on delivering projects with precision, transparency and attention to every detail, ensuring a seamless journey from initial concept to final execution.</p>
+          </div>
+          <dl class="founder__facts" data-reveal="stagger">
+            <div><dt>Experience</dt><dd>4+ years in interior design</dd></div>
+            <div><dt>Focus</dt><dd>Residential &amp; commercial projects</dd></div>
+            <div><dt>Approach</dt><dd>Concept to final execution</dd></div>
+          </dl>
         </div>
       </div>
     </section>

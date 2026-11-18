@@ -2174,6 +2174,34 @@
         "muted": true,
         "loop": true
       }
+    },
+    {
+      "folder": "about",
+      "name": "rutvik-virani-founder-vastu-interior",
+      "alt": "Er. Rutvik Virani, founder and director of Vastu Interior",
+      "width": 1086,
+      "height": 1448,
+      "sizes": [
+        {
+          "file": "/assets/img/about/rutvik-virani-founder-vastu-interior-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 13226
+        },
+        {
+          "file": "/assets/img/about/rutvik-virani-founder-vastu-interior-768.webp",
+          "width": 768,
+          "height": 1024,
+          "bytes": 23528
+        },
+        {
+          "file": "/assets/img/about/rutvik-virani-founder-vastu-interior-1086.webp",
+          "width": 1086,
+          "height": 1448,
+          "bytes": 34064
+        }
+      ],
+      "source": "client"
     }
   ]
 }

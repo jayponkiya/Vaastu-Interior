@@ -1,6 +1,6 @@
 # Image and video credits
 
-All media below is from Pexels and used under the [Pexels License](https://www.pexels.com/license/):
+All stock media below is from Pexels and used under the [Pexels License](https://www.pexels.com/license/):
 free for commercial use, no attribution required, no selling unaltered copies, no implying endorsement
 by people or brands shown. Credit is listed here anyway. Files are resized and converted to WebP; originals are not kept in the repo.
 
@@ -74,3 +74,9 @@ Project images are stock photos standing in for sample projects. They are **not*
 | `assets/img/projects/minimal-2bhk-home/minimal-living-globe-pendant-{480,768,1280,1920}.webp` | [Pexels](https://www.pexels.com/photo/20285350/) | [Hello Pipcke](https://www.pexels.com/@hello-pipcke-1008732483) | Pexels License (free to use, no attribution required) | Bright minimal living room with a pale sectional sofa and globe pendant |
 | `assets/video/hero-living-room-{1920x1080,1280x720}.{mp4,webm}` | [Pexels](https://www.pexels.com/video/19403229/) | [isgandar Ganbarov](https://www.pexels.com/@isgandar-ganbarov) | Pexels License (free to use, no attribution required) | Decorative background video (muted): slow pan through a living room with walnut wall panelling |
 | `assets/img/hero/hero-living-room-poster-{1280,1920}.webp` | [Pexels](https://www.pexels.com/video/19403229/) | [isgandar Ganbarov](https://www.pexels.com/@isgandar-ganbarov) | Pexels License (free to use, no attribution required) | Living room with walnut wall panelling, a cream sofa and a low wooden table |
+
+## Supplied by the client
+
+| File | Source | Photographer | License | Alt text |
+|---|---|---|---|---|
+| `assets/img/about/rutvik-virani-founder-vastu-interior-{480,768,1086}.webp` | Supplied by Vastu Interior | Not stated | Client-owned; used with permission on this site | Er. Rutvik Virani, founder and director of Vastu Interior |
