@@ -273,7 +273,19 @@
   .project-card__body { padding: var(--s-5); }
 }
 
+.projects__aside {
+  display: grid;
+  justify-items: start;
+  gap: var(--s-2);
+}
+
 /* Stacked (pinned) mode */
+/* Lifted earlier cards rise up to ~42px above the stack: keep that gap clear. */
+.projects.is-stacked .section-head { margin-bottom: var(--s-6); }
+@media (max-width: 767px) {
+  .projects.is-stacked .section-head { margin-bottom: var(--s-5); padding-bottom: var(--s-2); }
+  .projects.is-stacked .projects__note { display: none; }
+}
 .projects.is-stacked .project-stack {
   position: relative;
   height: var(--card-h);
