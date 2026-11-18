@@ -220,8 +220,41 @@
   height: 100%;
 }
 .site-header__logo {
-  display: grid;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-right: auto;
+  text-decoration: none;
+}
+.site-header__mark { display: grid; }
+/* "INTERIOR" label beside the mark, echoing the line under the full logo.
+   Brown on cream, gold over a dark hero or the open menu. */
+.site-header__word {
+  position: relative;
+  padding-left: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+.site-header__word::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 20px;
+  margin-top: -10px;
+  border-left: 1px solid currentColor;
+  opacity: 0.45;
+}
+[data-header-theme="light"] .site-header:not(.is-scrolled) .site-header__word,
+.menu-open .site-header .site-header__word { color: var(--gold); }
+@media (min-width: 1024px) {
+  .site-header__logo { gap: 16px; }
+  .site-header__word { padding-left: 16px; font-size: 12px; }
+  .site-header__word::before { height: 28px; margin-top: -14px; }
 }
 .site-header__logo .logo {
   grid-area: 1 / 1;
