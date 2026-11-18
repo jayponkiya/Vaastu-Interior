@@ -409,7 +409,7 @@
   transition: opacity var(--dur) var(--ease-out);
 }
 .menu.is-open .menu__aside { opacity: 1; transition-delay: 0.6s; }
-.menu__aside a { color: var(--cream); text-decoration: none; }
+.menu__aside a:not(.btn) { color: var(--cream); text-decoration: none; }
 .menu__aside .btn { justify-self: start; }
 
 html.menu-open { overflow: hidden; }
