@@ -611,12 +611,30 @@
 .founder__facts > div { padding-top: var(--s-2); border-top: 1px solid var(--line); }
 .founder__facts dt { font-size: var(--fs-label); letter-spacing: var(--ls-label); color: var(--text-muted); }
 .founder__facts dd { margin: var(--s-1) 0 0; }
+.founder__expertise { display: grid; gap: var(--s-2); margin-top: var(--s-3); }
+.founder__label {
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.founder__cta { margin-top: var(--s-3); }
+.founder__media { max-width: 420px; }
 @media (min-width: 768px) {
   .founder__facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (min-width: 1024px) {
-  .founder { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); gap: var(--s-5) var(--s-10, 80px); }
-  .founder__media { position: sticky; top: calc(var(--header-h) + var(--s-5)); align-self: start; }
+  /* Photo column capped so the portrait stays modest on wide screens and
+     the text gets the width. */
+  .founder {
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    gap: var(--s-5) var(--s-8);
+  }
+  .founder__media { max-width: none; position: sticky; top: calc(var(--header-h) + var(--s-5)); align-self: start; }
+  .founder__bio { max-width: 46em; }
+}
+@media (min-width: 1440px) {
+  .founder { grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: var(--s-5) 100px; }
 }
 
 /* Highlights with icons (why choose us) */
