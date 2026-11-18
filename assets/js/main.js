@@ -48,7 +48,7 @@
     const MIN = 2000;    // shortest run, so it never flashes
     const MAX = 5000;    // always fully closed by now
     const EXIT = 600;    // panel lift
-    const LEAD = 250;    // page reveal starts this long before the lift
+    const LEAD = 630;    // hero reveal starts this long before the lift (reference)
     const HOLD = 120;    // pause at 100%
     const FORCE_AT = MAX - EXIT - LEAD - HOLD - 350;   // push to 100% in time
 

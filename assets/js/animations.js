@@ -6,6 +6,7 @@
      data-parallax="0.12"                       image inside .media (0–0.16)
      data-count="250" data-prefix="" data-suffix="+"   counters
      data-cursor="View"                         cursor label on hover
+     data-hero="title|lead|cta"                 hero entrance (see initHero)
    Does nothing unless html.motion-ok is set (JS on, no reduced motion).
    Animates transform and opacity only.
    ========================================================================== */
@@ -94,6 +95,37 @@
         scrollTrigger: { trigger: el, start: 'top 90%', once: true },
       });
     });
+  }
+
+  /* Hero entrance -------------------------------------------------------
+     Reference timing (docs/REFERENCE-NOTES.md §3), t=0 at vi:ready, which
+     main.js fires 0.63s before the preloader panel lifts:
+       title  lines y 40px -> 0 + fade, 0.45s power2.out, +0.065s per line
+       lead   y 25px -> 0 + fade at +0.33s, 0.6s
+       cta    y 20px -> 0 + fade at +0.56s, 0.47s
+     Words of one line move together; the media itself does not animate. */
+  function initHero() {
+    const title = document.querySelector('[data-hero="title"]');
+    if (title) {
+      title.setAttribute('aria-label', title.textContent.replace(/s+/g, ' ').trim());
+      splitWords(title);
+      const words = [...title.querySelectorAll('.split-word')];
+      words.forEach((w) => w.classList.add('split-word--free'));
+      const tops = [...new Set(words.map((w) => w.offsetTop))].sort((a, b) => a - b);
+      gsap.set(words, { y: 40, opacity: 0 });
+      gsap.set(title, { opacity: 1 });
+      gsap.to(words, {
+        y: 0,
+        opacity: 1,
+        duration: 0.45,
+        ease: 'power2.out',
+        delay: (i) => tops.indexOf(words[i].offsetTop) * 0.065,
+      });
+    }
+    const lead = document.querySelector('[data-hero="lead"]');
+    if (lead) gsap.fromTo(lead, { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out', delay: 0.33 });
+    const cta = document.querySelector('[data-hero="cta"]');
+    if (cta) gsap.fromTo(cta, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.47, ease: 'power2.out', delay: 0.56 });
   }
 
   /* Reveals ---------------------------------------------------------------- */
@@ -215,7 +247,7 @@
     gsap.killTweensOf('*');
     if (lenis) lenis.destroy();
     document.querySelectorAll('.cursor').forEach((c) => c.remove());
-    document.querySelectorAll('[data-reveal], [data-reveal="stagger"] > *, [data-split], .split-word__inner, [data-parallax]')
+    document.querySelectorAll('[data-reveal], [data-reveal="stagger"] > *, [data-split], [data-hero], .split-word, .split-word__inner, [data-parallax]')
       .forEach((el) => gsap.set(el, { clearProps: 'all' }));
     document.querySelectorAll('[data-reveal="mask"]').forEach((el) => el.classList.add('is-revealed'));
     document.querySelectorAll('[data-count]').forEach((el) => {
@@ -234,6 +266,7 @@
     if (started) return;
     started = true;
     if (lenis) lenis.start();
+    initHero();
     initSplit();
     initReveals();
     initParallax();

@@ -16,7 +16,7 @@ Static website for Vastu Interior, an interior design studio in Ahmedabad.
 ## Design tokens (from logo and favicon)
 --ink #171310, --espresso #2A1710, --brown #6B4C35, --gold #C9A36B, --cream #F5EFE6
 Type: Inter Tight only (400 headings, 500 body/UI), the closest free match to the reference site's PP Neue Montreal. Self-hosted woff2, font-display: swap. Scale and timings: docs/REFERENCE-NOTES.md.
-8px spacing grid. Section padding 120px desktop / 72px mobile. Container max 1280px.
+8px spacing grid for component spacing. Page layout follows the reference (docs/REFERENCE-NOTES.md §4), which steps outside the grid: side gutters 16 / 32 / 60px and section padding 40 / 60 / 100px (mobile / >=768 / >=1200), full width with no max-width, sections flush. Two-column pattern: flexible media + 396px side column, 40px gap (24px below 1200). Hero: 100svh full-bleed media with a 60% dark overlay.
 Style reference: architects.framer.website, interiia.framer.website, arkode.framer.website (editorial, big type, white space, smooth animation).
 
 ## Pages (29 total, no blog)

@@ -104,6 +104,35 @@
   --btn-border: var(--line-light);
 }
 
+/* Text button (reference primary CTA): no box, 1px underline that grows
+   from the left on hover and retracts to the right on leave. */
+.link-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 7px;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  line-height: var(--lh-text);
+  letter-spacing: var(--ls-btn);
+  text-decoration: none;
+  color: inherit;
+}
+.link-line::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-line:hover::after,
+.link-line:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /* Text link with animated underline */
 .link-arrow {
   position: relative;
@@ -154,10 +183,6 @@
   object-fit: cover;
 }
 .media--wide { --ratio: 16 / 10; }
-.media--hero { --ratio: 4 / 5; }
-@media (min-width: 768px) {
-  .media--hero { --ratio: 16 / 9; }
-}
 
 /* Cards --------------------------------------------------------------------- */
 /* Service card: numbered, text-led */

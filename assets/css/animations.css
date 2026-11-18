@@ -13,7 +13,8 @@
 .motion-ok [data-reveal="fade"],
 .motion-ok [data-reveal="fade-up"],
 .motion-ok [data-reveal="stagger"] > *,
-.motion-ok [data-split] {
+.motion-ok [data-split],
+.motion-ok [data-hero] {
   opacity: 0;
 }
 .motion-ok [data-reveal="fade-up"],
@@ -30,6 +31,8 @@
   margin: 0 -0.06em -0.12em 0;
 }
 .split-word__inner { display: inline-block; }
+/* Hero words move whole (no clipping box), like the reference. */
+.split-word--free { overflow: visible; }
 
 /* Mask reveal: a cover layer scales away, the image settles from 1.2x.
    Set --mask-color to the section background when it is not cream. */

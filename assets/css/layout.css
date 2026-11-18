@@ -12,7 +12,6 @@
 
 /* Sections ----------------------------------------------------------------- */
 .section { padding-block: var(--section-pad); }
-.section--hero { padding-top: calc(var(--header-h) + var(--s-8)); }
 .section--paper { background: var(--paper); }
 .section--dark {
   background: var(--espresso);
@@ -23,24 +22,107 @@
 .section--dark h1 em, .section--dark h2 em, .section--dark h3 em,
 .section--dark .eyebrow { color: var(--gold); }
 
+/* Section heading: h2 over a full-width hairline, content below. */
 .section-head {
   display: grid;
-  gap: var(--s-3);
-  margin-bottom: var(--s-6);
+  gap: var(--s-2);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--s-3);
+}
+@media (min-width: 768px) {
+  .section-head { margin-bottom: var(--s-5); }
 }
 @media (min-width: 1024px) {
   .section-head {
-    grid-template-columns: 1fr minmax(0, 28rem);
+    grid-template-columns: 1fr minmax(0, var(--col-side));
     align-items: end;
-    gap: var(--s-8);
-    margin-bottom: var(--s-8);
+    gap: var(--col-gap);
   }
+}
+
+/* Hero (docs/REFERENCE-NOTES.md §3) ---------------------------------------
+   Full-bleed media at 100svh with a 60% dark overlay. Heading top-left,
+   lead + text button in a right column, facts row on the bottom edge. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--ink);
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgb(25 25 25 / 0.6);
+}
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.hero__media > img,
+.hero__media > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__inner {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: var(--s-2);
+  min-height: inherit;
+  padding: 130px var(--gutter) 80px;
+}
+.hero__title {
+  max-width: 350px;
+  color: #fff;
+}
+.hero__side {
+  display: grid;
+  justify-items: start;
+  gap: var(--s-2);
+  max-width: 400px;
+}
+.hero__lead { line-height: var(--lh-text); }
+.hero__facts {
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 32px;
+  margin: 0;
+}
+.hero__facts dt { opacity: 0.8; }
+.hero__facts dd { margin: 4px 0 0; }
+@media (min-width: 768px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 40px;
+    padding: 150px var(--gutter) 40px;
+  }
+  .hero__title { grid-column: 1; max-width: 500px; }
+  .hero__side { grid-column: 2; grid-row: 2; }
+  .hero__facts {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--s-2);
+  }
+  .hero__facts > div { width: 150px; }
+}
+@media (min-width: 1200px) {
+  .hero__inner { grid-template-columns: minmax(0, 1fr) 400px; }
+  .hero__facts > div { width: 200px; }
 }
 
 /* Grids -------------------------------------------------------------------- */
 .grid {
   display: grid;
-  gap: var(--grid-gap, var(--s-4));
+  gap: var(--grid-gap, var(--col-gap));
 }
 @media (min-width: 768px) {
   .grid--3, .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -50,14 +132,15 @@
   .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
+/* Flexible media column + fixed side column (reference: 1fr + 396px). */
 .split {
   display: grid;
-  gap: var(--s-6);
-  align-items: center;
+  gap: var(--s-4) var(--col-gap);
+  align-items: end;
 }
 @media (min-width: 1024px) {
-  .split { grid-template-columns: 5fr 7fr; gap: var(--s-10); }
-  .split--reverse { grid-template-columns: 7fr 5fr; }
+  .split { grid-template-columns: minmax(0, 1fr) var(--col-side); }
+  .split--reverse { grid-template-columns: var(--col-side) minmax(0, 1fr); }
   .split--reverse > :first-child { order: 2; }
 }
 
@@ -88,7 +171,8 @@
   z-index: var(--z-header);
   height: var(--header-h);
   color: var(--ink);
-  transition: transform var(--dur) var(--ease-out);
+  /* Reference: slides out / in over 0.8s, quart-out. */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 /* Solid background layer: faded in with opacity, never animated colour. */
 .site-header::before {
@@ -96,7 +180,6 @@
   position: absolute;
   inset: 0;
   background: rgb(245 239 230 / 0.94);
-  border-bottom: 1px solid var(--line);
   opacity: 0;
   transition: opacity var(--dur) var(--ease-out);
 }
@@ -104,6 +187,16 @@
   .site-header::before { backdrop-filter: blur(12px); background: rgb(245 239 230 / 0.82); }
 }
 .site-header.is-scrolled::before { opacity: 1; }
+/* 1px hairline in the current text colour (white over the hero, ink over cream). */
+.site-header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.18;
+}
+.menu-open .site-header::after { opacity: 0; }
 .site-header.is-hidden { transform: translateY(-100%); }
 
 .site-header__inner {
@@ -120,13 +213,10 @@
 .site-header__logo .logo {
   grid-area: 1 / 1;
   width: auto;
-  height: 2.75rem;            /* 44 */
+  height: 2.5rem;             /* 40, fits the 64px header */
   transition: opacity var(--dur) var(--ease-out);
 }
 .logo--light { opacity: 0; }
-@media (min-width: 1024px) {
-  .site-header__logo .logo { height: 3.5rem; }   /* 56 */
-}
 
 /* Pages with a dark hero set <body data-header-theme="light">. */
 [data-header-theme="light"] .site-header:not(.is-scrolled),
@@ -141,7 +231,7 @@
 .site-nav { display: none; }
 .site-nav__list {
   display: flex;
-  gap: var(--s-4);
+  gap: var(--s-5);   /* 40, reference */
 }
 .site-nav__link {
   position: relative;
@@ -160,7 +250,7 @@
   background: currentColor;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform var(--dur) var(--ease-out);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav__link:hover::after,
 .site-nav__link.is-active::after {

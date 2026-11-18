@@ -144,25 +144,26 @@
   <!-- /partial:header -->
 
   <main id="main">
-    <!-- Hero: split heading, buttons, mask + parallax image -->
-    <section class="section section--dark section--hero">
-      <div class="container flow" style="--flow-space: var(--s-4)">
-        <p class="eyebrow" data-reveal="fade">Interior design studio · Ahmedabad</p>
-        <h1 data-split>Interiors that feel <em>calm, considered</em> and completely yours</h1>
-        <p class="lead" data-reveal="fade-up" data-delay="0.3">We plan, visualise and build homes, offices and showrooms across Ahmedabad, so you see every room in 3D before a single wall is touched.</p>
-        <div class="btn-group" data-reveal="fade-up" data-delay="0.45">
-          <a class="btn btn--light" href="/get-quote">
-            <span class="btn__label"><span class="btn__text" data-label="Get a free quote">Get a free quote</span></span>
-            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a class="btn btn--outline" href="/projects/">
-            <span class="btn__label"><span class="btn__text" data-label="View projects">View projects</span></span>
-          </a>
+    <!-- Hero: full-bleed media + 60% overlay, heading top-left, lead + text
+         button in a right column, facts row on the bottom edge.
+         Layout and reveal follow docs/REFERENCE-NOTES.md §3. -->
+    <section class="hero">
+      <div class="hero__media">
+        <!-- DEMO: placeholder image until real photography or video arrives -->
+        <img src="/assets/img/hero/placeholder-hero.webp" width="1600" height="900" alt="Placeholder for a living room photograph" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__inner">
+        <h1 class="hero__title" data-hero="title">Interiors that feel calm, considered and completely yours</h1>
+        <div class="hero__side">
+          <p class="hero__lead" data-hero="lead">We plan, visualise and build homes, offices and showrooms across Ahmedabad, so you see every room in 3D before a single wall is touched.</p>
+          <a class="link-line" href="/get-quote" data-hero="cta">Get a free quote</a>
         </div>
-        <!-- DEMO: placeholder image until real photography arrives -->
-        <div class="media media--hero" data-reveal="mask">
-          <img src="/assets/img/hero/placeholder-hero.webp" width="1600" height="900" alt="Placeholder for a living room photograph" fetchpriority="high" data-parallax="0.12">
-        </div>
+        <dl class="hero__facts">
+          <div><dt>Studio</dt><dd>Vastu Interior, Ahmedabad</dd></div>
+          <div><dt>Office</dt><dd>SG Highway, Bodakdev</dd></div>
+          <div><dt>Work</dt><dd>Residential &amp; commercial</dd></div>
+          <div><dt>Scope</dt><dd>Design to handover</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -201,7 +202,7 @@
 
         <div class="split split--reverse">
           <div class="media media--wide" data-reveal="mask">
-            <img src="/assets/img/hero/placeholder-landscape.webp" width="1200" height="750" alt="Placeholder for a modular kitchen photograph" loading="lazy" decoding="async">
+            <img src="/assets/img/hero/placeholder-landscape.webp" width="1200" height="750" alt="Placeholder for a modular kitchen photograph" loading="lazy" decoding="async" data-parallax="0.12">
           </div>
           <div class="flow">
             <h3 data-reveal="fade-up">A home planned around daylight, storage and the way your family moves</h3>
