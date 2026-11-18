@@ -1,95 +1,284 @@
 /* ==========================================================================
    Vastu Interior — forms.js
-   [data-quote-form]: short quote form for a static site (no backend).
-   On submit it validates the fields, then opens WhatsApp to the studio
-   (+91 63590 31530) with the details pre-written. Nothing is stored or
-   sent anywhere else. A mailto link with the same text is offered as a
-   fallback. Replace with a form handler (e.g. Formspree) if one is added
-   in the contact phase.
+   Every form[data-quote-form] on the site (contact, get-quote, the short
+   forms on the service pages) goes through this file.
+
+   - Validation: required fields, email format, 10-digit Indian mobile
+     (accepts +91 / 91 / 0 prefixes, spaces and dashes), required radio
+     groups (fieldset[data-required]). Errors are announced per field.
+   - Honeypot: a hidden "website" field. Bots that fill it are sent to the
+     thank-you page and nothing is sent.
+   - Multi-step forms (form[data-steps]): one fieldset.form-step at a time,
+     validated before moving on, with opacity/transform transitions.
+   - Submit handler chosen by ONE value, FORM_BACKEND, below.
+   - On success the visitor goes to /thank-you.
    ========================================================================== */
 (() => {
   'use strict';
 
+  /* ---- Configuration ----------------------------------------------------
+     FORM_BACKEND decides where submissions go:
+       ''                                  -> WhatsApp (default). Opens a chat
+                                              with the details pre-written; the
+                                              visitor presses send.
+       'https://formspree.io/f/<form-id>'  -> Formspree (posts the form).
+       '<web3forms-access-key>'            -> Web3Forms (any other value is
+                                              treated as an access key).        */
+  const FORM_BACKEND = '';
+
   const WHATSAPP = '916359031530';
   const EMAIL = 'vastuinterior10@gmail.com';
+  const THANK_YOU = '/thank-you';
+  const HONEYPOT = 'website';
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const backend = !FORM_BACKEND ? 'whatsapp' : FORM_BACKEND.startsWith('https://formspree.io/') ? 'formspree' : 'web3forms';
+
+  /* ---- Validation ------------------------------------------------------- */
+  const digits = (v) => v.replace(/[\s()-]/g, '').replace(/^(\+91|0091|91(?=\d{10}$)|0(?=\d{10}$))/, '');
+  const isMobile = (v) => /^[6-9]\d{9}$/.test(digits(v));
+
+  function errorFor(field) {
+    const label = field.dataset.label || 'details';
+    if (field.matches('fieldset')) {
+      return field.querySelector('input:checked') ? '' : `Please choose ${label}.`;
+    }
+    const value = field.value.trim();
+    if (field.required && !value) return `Please enter your ${label}.`;
+    if (!value) return '';
+    if (field.type === 'tel' && !isMobile(value)) return 'Please enter a valid 10-digit Indian mobile number.';
+    if (field.type === 'email' && field.validity.typeMismatch) return 'Please enter a valid email address.';
+    return '';
+  }
 
   function showError(field, message) {
-    const wrap = field.closest('.field');
+    const wrap = field.matches('fieldset') ? field : field.closest('.field');
     if (!wrap) return;
-    let err = wrap.querySelector('.field__error');
+    const id = `${field.id || field.dataset.name}-error`;
+    let err = wrap.querySelector(':scope > .field__error');
     if (!err) {
       err = document.createElement('span');
       err.className = 'field__error';
-      err.id = `${field.id}-error`;
+      err.id = id;
       wrap.append(err);
     }
     err.textContent = message;
     wrap.classList.toggle('is-invalid', Boolean(message));
-    field.setAttribute('aria-invalid', message ? 'true' : 'false');
-    const described = (field.getAttribute('aria-describedby') || '').split(' ').filter((id) => id && id !== err.id);
-    if (message) described.push(err.id);
-    if (described.length) field.setAttribute('aria-describedby', described.join(' '));
-    else field.removeAttribute('aria-describedby');
+    const target = field;
+    target.setAttribute('aria-invalid', message ? 'true' : 'false');
+    const described = (target.getAttribute('aria-describedby') || '').split(' ').filter((x) => x && x !== id);
+    if (message) described.push(id);
+    if (described.length) target.setAttribute('aria-describedby', described.join(' '));
+    else target.removeAttribute('aria-describedby');
   }
 
-  function messageFor(field) {
-    if (field.validity.valueMissing) return `Please enter your ${field.dataset.label || 'details'}.`;
-    if (field.validity.patternMismatch) return field.dataset.patternMessage || 'Please check this field.';
-    if (field.validity.typeMismatch) return 'Please check the format.';
-    return '';
+  // Fields to check inside a scope, skipping hidden branches and the honeypot.
+  const checkable = (scope) => [
+    ...scope.querySelectorAll('input:not([type="hidden"]):not([type="radio"]):not([type="checkbox"]), select, textarea, fieldset[data-required]'),
+  ].filter((f) => f.name !== HONEYPOT && !f.closest('[hidden]'));
+
+  function validate(scope) {
+    let first = null;
+    checkable(scope).forEach((field) => {
+      const msg = errorFor(field);
+      showError(field, msg);
+      if (msg && !first) first = field;
+    });
+    if (first) (first.matches('fieldset') ? first.querySelector('input') : first).focus();
+    return !first;
   }
 
-  function initQuoteForm(form) {
+  /* ---- Message text (WhatsApp / email fallback) ------------------------- */
+  function summary(form) {
+    const data = new FormData(form);
+    const service = data.get('service');
+    const lines = [`Hi Vastu Interior, ${form.dataset.intro || "I'd like a quote"}${service ? ` for ${service}` : ''}.`];
+    const seen = new Set();
+    for (const [name, raw] of data) {
+      const value = String(raw).trim();
+      if (!value || seen.has(name) || name === HONEYPOT || name === 'service' || name.startsWith('_')) continue;
+      seen.add(name);
+      const el = form.querySelector(`[name="${name}"]`);
+      if (el && el.closest('[data-show-if][hidden]')) continue; // branch not chosen (earlier steps are hidden too, but count)
+      const label = el?.type === 'radio' ? el.closest('fieldset')?.dataset.summary : el?.dataset.summary || form.querySelector(`label[for="${el?.id}"]`)?.textContent.replace('*', '').trim();
+      const all = data.getAll(name).map(String).filter(Boolean).join(', ');
+      lines.push(`${label || name}: ${all}`);
+    }
+    return { text: lines.join('\n'), subject: `${form.dataset.subject || 'Quote request'}${service ? `: ${service}` : ''}` };
+  }
+
+  /* ---- Submit handlers --------------------------------------------------- */
+  const goThankYou = (channel, extra = {}) => {
+    try { sessionStorage.setItem('vi-sent', JSON.stringify({ channel, ...extra })); } catch (e) { /* private mode */ }
+    window.location.assign(THANK_YOU);
+  };
+
+  async function send(form) {
+    const { text, subject } = summary(form);
+    const mail = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+
+    if (backend === 'whatsapp') {
+      const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+      window.open(wa, '_blank', 'noopener');
+      // The thank-you page keeps both links in case the pop-up was blocked.
+      setTimeout(() => goThankYou('whatsapp', { wa, mail }), 400);
+      return;
+    }
+
+    const data = new FormData(form);
+    data.delete(HONEYPOT);
+    let url = FORM_BACKEND;
+    if (backend === 'web3forms') {
+      url = 'https://api.web3forms.com/submit';
+      data.append('access_key', FORM_BACKEND);
+      data.append('subject', subject);
+      data.append('from_name', 'Vastu Interior website');
+    } else {
+      data.append('_subject', subject);
+    }
+    const res = await fetch(url, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || json.success === false) throw new Error(json.message || `HTTP ${res.status}`);
+    goThankYou(backend);
+  }
+
+  /* ---- Multi-step -------------------------------------------------------- */
+  function initSteps(form) {
+    const steps = [...form.querySelectorAll('.form-step')];
+    const bar = form.querySelector('[data-step-bar]');
+    const label = form.querySelector('[data-step-label]');
+    const prev = form.querySelector('[data-step-prev]');
+    const next = form.querySelector('[data-step-next]');
+    const submit = form.querySelector('[type="submit"]');
+    let index = 0;
+    let moving = false;
+
+    const update = () => {
+      steps.forEach((s, i) => { s.hidden = i !== index; });
+      prev.hidden = index === 0;
+      next.hidden = index === steps.length - 1;
+      submit.hidden = index !== steps.length - 1;
+      if (bar) bar.style.transform = `scaleX(${(index + 1) / steps.length})`;
+      if (label) label.textContent = `Step ${index + 1} of ${steps.length}`;
+    };
+
+    const go = (to) => {
+      if (moving || to === index || to < 0 || to >= steps.length) return;
+      const dir = to > index ? 1 : -1;
+      const from = steps[index];
+      const done = () => {
+        index = to;
+        update();
+        const heading = steps[index].querySelector('.form-step__title');
+        if (heading) heading.focus({ preventScroll: true });
+        const top = form.getBoundingClientRect().top;
+        if (top < 0) form.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+        if (!reduce.matches && typeof steps[index].animate === 'function') {
+          steps[index].animate(
+            [{ opacity: 0, transform: `translateX(${dir * 2}rem)` }, { opacity: 1, transform: 'none' }],
+            { duration: 420, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' },
+          );
+        }
+        moving = false;
+      };
+      moving = true;
+      if (reduce.matches || typeof from.animate !== 'function') { done(); return; }
+      from.animate(
+        [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: `translateX(${dir * -2}rem)` }],
+        { duration: 200, easing: 'cubic-bezier(0.4, 0, 1, 1)', fill: 'forwards' },
+      ).finished.then((a) => { done(); a.cancel(); });
+    };
+
+    next.addEventListener('click', () => { if (validate(steps[index])) go(index + 1); });
+    prev.addEventListener('click', () => go(index - 1));
+    // Enter in a text field moves on rather than submitting early.
+    form.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && e.target.matches('input') && index < steps.length - 1) {
+        e.preventDefault();
+        next.click();
+      }
+    });
+    update();
+    return { current: () => steps[index], isLast: () => index === steps.length - 1 };
+  }
+
+  /* Show / hide branches: [data-show-if="field:value1,value2"] */
+  function initConditions(form) {
+    const blocks = [...form.querySelectorAll('[data-show-if]')];
+    if (!blocks.length) return;
+    const apply = () => blocks.forEach((b) => {
+      const [name, values] = b.dataset.showIf.split(':');
+      const checked = form.querySelector(`[name="${name}"]:checked`);
+      b.hidden = !(checked && values.split(',').includes(checked.value));
+    });
+    form.addEventListener('change', apply);
+    apply();
+  }
+
+  /* ---- Init -------------------------------------------------------------- */
+  function initForm(form) {
     const status = form.querySelector('[data-form-status]');
-    const fields = [...form.querySelectorAll('input, textarea, select')].filter((f) => f.type !== 'hidden');
+    const submit = form.querySelector('[type="submit"]');
+    const steps = form.hasAttribute('data-steps') ? initSteps(form) : null;
     form.noValidate = true;
+    initConditions(form);
 
-    fields.forEach((field) => {
-      field.addEventListener('blur', () => { if (field.value) showError(field, messageFor(field)); });
-      field.addEventListener('input', () => { if (field.getAttribute('aria-invalid') === 'true') showError(field, messageFor(field)); });
+    const setStatus = (type, msg) => {
+      if (!status) return;
+      status.className = `form-status form-status--${type}`;
+      status.textContent = msg;
+      status.hidden = !msg;
+    };
+
+    form.addEventListener('focusout', (e) => {
+      const f = e.target;
+      if (f.matches('input, select, textarea') && f.type !== 'radio' && f.value && f.name !== HONEYPOT) showError(f, errorFor(f));
+    });
+    form.addEventListener('input', (e) => {
+      const f = e.target;
+      if (f.getAttribute('aria-invalid') === 'true') showError(f, errorFor(f));
+    });
+    form.addEventListener('change', (e) => {
+      const set = e.target.closest('fieldset[data-required]');
+      if (set && set.getAttribute('aria-invalid') === 'true') showError(set, errorFor(set));
     });
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      let firstBad = null;
-      fields.forEach((field) => {
-        const msg = messageFor(field);
-        showError(field, msg);
-        if (msg && !firstBad) firstBad = field;
-      });
-      if (firstBad) {
-        firstBad.focus();
-        if (status) { status.className = 'form-status form-status--error'; status.textContent = 'Please fill in the highlighted fields.'; status.hidden = false; }
+      if (steps && !steps.isLast()) return;
+      if (!validate(steps ? steps.current() : form)) {
+        setStatus('error', 'Please check the highlighted fields.');
         return;
       }
+      setStatus('', '');
+      if (form.elements[HONEYPOT]?.value) { goThankYou('none'); return; }
 
-      const data = new FormData(form);
-      const lines = [
-        `Hi Vastu Interior, I'd like a quote${data.get('service') ? ` for ${data.get('service')}` : ''}.`,
-        `Name: ${data.get('name')}`,
-        `Phone: ${data.get('phone')}`,
-      ];
-      if (data.get('location')) lines.push(`Location: ${data.get('location')}`);
-      if (data.get('message')) lines.push(`About the project: ${data.get('message')}`);
-      const text = lines.join('\n');
-
-      const wa = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
-      const mail = `mailto:${EMAIL}?subject=${encodeURIComponent(`Quote request${data.get('service') ? `: ${data.get('service')}` : ''}`)}&body=${encodeURIComponent(text)}`;
-      window.open(wa, '_blank', 'noopener');
-
-      if (status) {
-        status.className = 'form-status form-status--success';
-        status.innerHTML = '';
-        status.append('WhatsApp should now be open with your details. Press send there to reach us. ');
-        const a = document.createElement('a');
-        a.href = mail;
-        a.textContent = 'Prefer email? Send it by email instead.';
-        status.append(a);
-        status.hidden = false;
-        status.focus();
+      const label = submit?.querySelector('.btn__text');
+      const original = label?.textContent;
+      if (submit) submit.disabled = true;
+      if (label && backend !== 'whatsapp') label.textContent = 'Sending…';
+      try {
+        await send(form);
+      } catch (err) {
+        setStatus('error', `Sorry, that did not go through. Please try again, or call or WhatsApp us on +91 63590 31530.`);
+        if (submit) submit.disabled = false;
+        if (label) label.textContent = original;
       }
     });
   }
 
-  document.querySelectorAll('form[data-quote-form]').forEach(initQuoteForm);
+  /* Thank-you page: show the WhatsApp / email links if the chat was the channel. */
+  function initThanks(root) {
+    let sent = null;
+    try { sent = JSON.parse(sessionStorage.getItem('vi-sent')); sessionStorage.removeItem('vi-sent'); } catch (e) { /* ignore */ }
+    const wa = root.querySelector('[data-thanks-whatsapp]');
+    if (sent && sent.channel === 'whatsapp' && wa && sent.wa) {
+      wa.querySelector('[data-thanks-wa-link]').href = sent.wa;
+      wa.querySelector('[data-thanks-mail-link]').href = sent.mail;
+      wa.hidden = false;
+    }
+  }
+
+  document.querySelectorAll('form[data-quote-form]').forEach(initForm);
+  document.querySelectorAll('[data-thanks]').forEach(initThanks);
 })();

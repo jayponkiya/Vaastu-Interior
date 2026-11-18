@@ -545,7 +545,7 @@
           </div>
           <div class="field">
             <label class="field__label" for="q-phone">Phone or WhatsApp <span class="req" aria-hidden="true">*</span></label>
-            <input class="field__input" id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[+]?[0-9 ]{10,15}" data-label="phone number" data-pattern-message="Please enter a 10-digit mobile number.">
+            <input class="field__input" id="q-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required data-label="mobile number">
           </div>
           <div class="field field--full">
             <label class="field__label" for="q-location">Area or locality</label>
@@ -555,12 +555,14 @@
             <label class="field__label" for="q-message">About your project</label>
             <textarea class="field__input" id="q-message" name="message" rows="3" placeholder="Size of the space, rooms to design, when you want to start"></textarea>
           </div>
+          <!-- Honeypot: leave empty. Bots that fill it are ignored (forms.js). -->
+          <div class="hp" aria-hidden="true"><label for="q-website">Website</label><input id="q-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
           <input type="hidden" name="service" value="Commercial interior design">
           <div class="form__footer">
             <button class="btn btn--primary" type="submit">
               <span class="btn__label"><span class="btn__text" data-label="Send via WhatsApp">Send via WhatsApp</span></span>
             </button>
-            <p class="form__note">Opens WhatsApp with your details filled in. Nothing is stored on this website.</p>
+            <p class="form__note">Your details go to our team on WhatsApp, where you press send. Nothing is stored on this website.</p>
           </div>
           <div class="form-status" data-form-status role="status" tabindex="-1" hidden></div>
         </form>
