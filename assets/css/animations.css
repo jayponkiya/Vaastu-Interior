@@ -1,0 +1,196 @@
+/* ==========================================================================
+   Vastu Interior — animations.css
+   Reveal start states, split text, mask reveal, parallax frames, preloader,
+   marquee, custom cursor. Only transform and opacity are animated.
+
+   html.motion-ok is set by the inline script in head.html when JS runs and
+   the visitor has not asked for reduced motion. Without it, nothing here
+   hides content. A 4s failsafe in the same script removes motion-ok if
+   animations.js never reports ready (html.motion-ready).
+   ========================================================================== */
+
+/* Reveal start states ------------------------------------------------------ */
+.motion-ok [data-reveal="fade"],
+.motion-ok [data-reveal="fade-up"],
+.motion-ok [data-reveal="stagger"] > *,
+.motion-ok [data-split] {
+  opacity: 0;
+}
+.motion-ok [data-reveal="fade-up"],
+.motion-ok [data-reveal="stagger"] > * {
+  transform: translateY(2.5rem);
+}
+
+/* Split text: each word sits in a clipping box and slides up. */
+.split-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0 0.06em 0.12em 0;   /* room for italic overhang and descenders */
+  margin: 0 -0.06em -0.12em 0;
+}
+.split-word__inner { display: inline-block; }
+
+/* Mask reveal: a cover layer scales away, the image settles from 1.2x.
+   Set --mask-color to the section background when it is not cream. */
+[data-reveal="mask"] { position: relative; overflow: hidden; }
+.motion-ok [data-reveal="mask"]::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  background: var(--mask-color, var(--cream));
+  transform-origin: top;
+  transition: transform 1.2s var(--ease-in-out);
+  pointer-events: none;
+}
+.motion-ok [data-reveal="mask"] > img:not([data-parallax]) {
+  transform: scale(1.2);
+  transition: transform 1.6s var(--ease-out);
+}
+.motion-ok [data-reveal="mask"].is-revealed::after { transform: scaleY(0); }
+.motion-ok [data-reveal="mask"].is-revealed > img:not([data-parallax]) { transform: none; }
+.section--dark [data-reveal="mask"] { --mask-color: var(--espresso); }
+.section--paper [data-reveal="mask"] { --mask-color: var(--paper); }
+
+/* Parallax: the image is taller than its frame so it can travel. */
+.media > img[data-parallax] {
+  height: 120%;
+  margin-top: -10%;
+  will-change: transform;
+}
+
+/* Preloader ----------------------------------------------------------------
+   Shown only on the first page view of a session (html.preloaded skips it).
+   CSS failsafe fades it out after 5s if the script never runs. */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-preloader);
+  display: none;
+  place-items: center;
+  background: var(--espresso);
+}
+.motion-ok:not(.preloaded) .preloader {
+  display: grid;
+  animation: preloader-failsafe 0.6s ease 5s forwards;
+}
+.is-preloading { overflow: hidden; }
+.preloader.is-done {
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-in-out);
+  pointer-events: none;
+}
+.preloader__inner {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-4);
+}
+.preloader__logo {
+  width: auto;
+  height: 6rem;
+  animation: preloader-logo 1s var(--ease-out) both;
+}
+.preloader__bar {
+  display: block;
+  width: 10rem;
+  height: 1px;
+  overflow: hidden;
+  background: var(--line-light);
+}
+.preloader__progress {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+@keyframes preloader-logo {
+  from { opacity: 0; transform: translateY(1rem); }
+}
+@keyframes preloader-failsafe {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* Marquee ------------------------------------------------------------------
+   Track holds the item list twice (second copy aria-hidden) and moves -50%. */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  padding-block: var(--s-4);
+  border-block: 1px solid var(--line);
+}
+.marquee__track {
+  display: flex;
+  flex: none;
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__list {
+  display: flex;
+  flex: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding-right: var(--s-4);
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  font-style: italic;
+  white-space: nowrap;
+}
+.marquee__item::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+  .marquee { overflow-x: auto; }
+}
+
+/* Custom cursor (fine pointers only, injected by animations.js) ----------- */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-fast) linear;
+}
+.cursor.is-visible { opacity: 1; }
+.cursor__dot {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: -2.5rem 0 0 -2.5rem;
+  border-radius: 50%;
+  background: var(--gold);
+  transform: scale(0.1);
+  transition: transform var(--dur) var(--ease-out), opacity var(--dur) var(--ease-out);
+}
+.cursor.is-link .cursor__dot { transform: scale(0.5); opacity: 0.5; }
+.cursor.is-label .cursor__dot { transform: scale(1); opacity: 1; }
+.cursor__label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+  transition: opacity var(--dur-fast) linear;
+}
+.cursor.is-label .cursor__label { opacity: 1; }
