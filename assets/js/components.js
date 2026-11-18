@@ -6,7 +6,6 @@
                             service rows (fine pointers only)
      [data-filter-root]     project filter tabs
      [data-lightbox]        gallery lightbox (native dialog)
-     [data-compare]         before / after slider
    Movement uses transform / translate and opacity only.
    ========================================================================== */
 (() => {
@@ -309,26 +308,10 @@
     }));
   }
 
-  /* Before / after slider ---------------------------------------------------
-     [data-compare] holds a native range input (keyboard and screen reader
-     friendly) laid over the images; its value drives --pos, which moves the
-     layers with transform only. */
-  function initCompare(root) {
-    const range = root.querySelector('input[type="range"]');
-    if (!range) return;
-    const set = () => {
-      root.style.setProperty('--pos', `${range.value}%`);
-      range.setAttribute('aria-valuetext', `${range.value}% concept sketch`);
-    };
-    range.addEventListener('input', set);
-    set();
-  }
-
   document.querySelectorAll('[data-slider]').forEach(initSlider);
   document.querySelectorAll('[data-service-preview]').forEach(initServicePreview);
   document.querySelectorAll('details[data-accordion]').forEach(initAccordion);
   document.querySelectorAll('[data-step-nav]').forEach(initStepNav);
   document.querySelectorAll('[data-filter-root]').forEach(initFilter);
   document.querySelectorAll('[data-lightbox]').forEach(initLightbox);
-  document.querySelectorAll('[data-compare]').forEach(initCompare);
 })();
