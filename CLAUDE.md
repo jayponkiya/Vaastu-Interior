@@ -9,6 +9,7 @@ Static website for Vastu Interior, an interior design studio in Ahmedabad.
 
 ## Business details (single source of truth)
 - Name: Vastu Interior
+- Domain: https://vaastuinterior.in (canonical, OG and JSON-LD URLs; no www, trailing slash on the home URL)
 - Email: vastuinterior10@gmail.com
 - Phone and WhatsApp: +91 63590 31530 (wa.me/916359031530)
 - Address: Office 305, Silver Oak Arcade, SG Highway, Bodakdev, Ahmedabad, Gujarat 380054
