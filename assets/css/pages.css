@@ -80,11 +80,42 @@
   width: 55%;
   border: 6px solid var(--cream);
 }
+/* Three studio principles; on large screens they sit at the foot of the text
+   column so it lines up with the bottom of the image stack. */
+.principles {
+  display: grid;
+  gap: var(--s-3) var(--col-gap);
+  margin-top: var(--s-3);
+}
+.principles__item {
+  display: grid;
+  align-content: start;
+  gap: var(--s-1);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+}
+.principles__num {
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  color: var(--text-muted);
+}
+.principles__title { font-size: var(--fs-h4); }
+.principles__item p { color: var(--text-muted); }
+@media (min-width: 768px) {
+  .principles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 @media (min-width: 1024px) {
   .about-preview {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
-    align-items: start;
+    align-items: stretch;
   }
+  .about-preview__text { grid-template-rows: auto auto auto 1fr; }
+  .principles { align-self: end; margin-top: var(--s-5); }
+}
+@media (min-width: 1200px) {
+  /* Keep the image stack from outgrowing the text column on wide screens. */
+  .about-preview { grid-template-columns: minmax(0, 1fr) minmax(0, 600px); }
+  .about-preview .media--portrait { --ratio: 1 / 1; }
   .about-preview__media { padding: 0 0 var(--s-10, 80px) var(--s-10, 80px); }
 }
 
