@@ -14,48 +14,135 @@
   const PRELOAD_KEY = 'vi-preloaded';
   const desktop = window.matchMedia('(min-width: 1024px)');
 
-  /* Preloader ------------------------------------------------------------- */
-  function initPreloader() {
-    const el = document.querySelector('.preloader');
-    const shouldRun =
-      el && root.classList.contains('motion-ok') && !root.classList.contains('preloaded');
+  /* Preloader -------------------------------------------------------------
+     Modelled on the reference loader (docs/REFERENCE-NOTES.md §2):
+     1. brand letters rise in (y 10px -> 0, staggered),
+     2. line + counter follow REAL loading progress (eager images, web fonts,
+        window load), never faster than a quad-out time floor of MIN ms,
+     3. page reveal starts (vi:ready), then the panel lifts with a curved edge.
+     Runs once per session; skipped under reduced motion (no html.motion-ok).
+     Closes by MAX ms no matter what; the CSS failsafe covers a dead script. */
+  const EASE_QUAD_OUT = 'cubic-bezier(0.5, 1, 0.89, 1)';      // GSAP power1.out
+  const EASE_QUART_IN_OUT = 'cubic-bezier(0.76, 0, 0.24, 1)'; // GSAP power3.inOut
 
+  function initPreloader() {
+    const el = document.querySelector('[data-preloader]');
+    let readyFired = false;
     const ready = () => {
-      root.classList.remove('is-preloading');
+      if (readyFired) return;
+      readyFired = true;
       window.viReady = true;
       document.dispatchEvent(new Event('vi:ready'));
     };
 
+    const shouldRun = el && typeof el.animate === 'function' &&
+      root.classList.contains('motion-ok') && !root.classList.contains('preloaded');
     if (!shouldRun) {
+      root.classList.add('preloader-done');
       ready();
       return;
     }
 
+    // All times are ms since navigation start (performance.now()), because the
+    // overlay is on screen from first paint, before this script runs.
+    const MIN = 2000;    // shortest run, so it never flashes
+    const MAX = 5000;    // always fully closed by now
+    const EXIT = 600;    // panel lift
+    const LEAD = 250;    // page reveal starts this long before the lift
+    const HOLD = 120;    // pause at 100%
+    const FORCE_AT = MAX - EXIT - LEAD - HOLD - 350;   // push to 100% in time
+
+    // Script arrived too late to animate and still close by MAX: just go.
+    if (performance.now() > FORCE_AT + 250) {
+      el.hidden = true;
+      root.classList.add('preloader-done');
+      try { sessionStorage.setItem(PRELOAD_KEY, '1'); } catch (e) { /* storage blocked */ }
+      ready();
+      return;
+    }
+
+    const panel = el.querySelector('.preloader__panel');
+    const brand = el.querySelector('.preloader__brand');
+    const line = el.querySelector('.preloader__line');
+    const num = el.querySelector('.preloader__num');
+    const curve = el.querySelector('.preloader__curve');
     root.classList.add('is-preloading');
-    const bar = el.querySelector('.preloader__progress');
-    const started = performance.now();
-    const MIN = 1200;
-    const MAX = 3000;
+
+    // 1. Brand letters
+    const chars = [...brand.textContent].map((ch) => {
+      const span = document.createElement('span');
+      span.className = 'preloader__char';
+      span.textContent = ch === ' ' ? String.fromCharCode(160) : ch;
+      return span;
+    });
+    brand.replaceChildren(...chars);
+    chars.forEach((c, i) => {
+      c.animate(
+        [{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 700, delay: 100 + i * 35, easing: EASE_QUAD_OUT, fill: 'forwards' },
+      );
+    });
+
+    // 2. Real loading progress
+    let loaded = 0;
+    const tasks = [];
+    const track = (promise) => tasks.push(promise.then(() => { loaded += 1; }, () => { loaded += 1; }));
+    [...document.images]
+      .filter((img) => !el.contains(img) && img.loading !== 'lazy')
+      .forEach((img) => track(img.complete ? Promise.resolve() : new Promise((resolve) => {
+        img.addEventListener('load', resolve, { once: true });
+        img.addEventListener('error', resolve, { once: true });
+      })));
+    if (document.fonts && document.fonts.ready) track(document.fonts.ready);
+    track(document.readyState === 'complete' ? Promise.resolve()
+      : new Promise((resolve) => window.addEventListener('load', resolve, { once: true })));
+    const total = tasks.length;
+
     let finished = false;
-
-    requestAnimationFrame(() => { if (bar) bar.style.transform = 'scaleX(0.4)'; });
-
     const finish = () => {
       if (finished) return;
       finished = true;
-      if (bar) bar.style.transform = 'scaleX(1)';
-      const wait = Math.max(0, MIN - (performance.now() - started));
-      setTimeout(() => {
-        el.classList.add('is-done');
-        try { sessionStorage.setItem(PRELOAD_KEY, '1'); } catch (e) { /* storage blocked */ }
-        ready();
-        el.addEventListener('transitionend', () => { el.hidden = true; }, { once: true });
-      }, wait + 300);
+      el.hidden = true;
+      root.classList.add('preloader-done');
+      root.classList.remove('is-preloading');
+      try { sessionStorage.setItem(PRELOAD_KEY, '1'); } catch (e) { /* storage blocked */ }
     };
 
-    if (document.readyState === 'complete') finish();
-    else window.addEventListener('load', finish, { once: true });
-    setTimeout(finish, MAX);
+    // 3. Exit: reveal the page underneath, then lift the panel.
+    const exit = () => {
+      ready();
+      setTimeout(() => {
+        const opts = { duration: EXIT, easing: EASE_QUART_IN_OUT, fill: 'forwards' };
+        panel.animate(
+          [{ transform: 'none' }, { transform: 'translateY(calc(-100% - 14vw - 2px))' }],
+          opts,
+        );
+        curve.animate([{ transform: 'scaleY(0)' }, { transform: 'scaleY(1)' }], opts)
+          .finished.then(finish, finish);
+      }, LEAD);
+    };
+
+    let shown = 0;
+    const quadOut = (t) => 1 - (1 - t) * (1 - t);
+    const tick = (now) => {
+      const forced = now >= FORCE_AT;
+      const floor = quadOut(Math.min(1, now / MIN));
+      const real = total ? loaded / total : 1;
+      const target = forced ? 1 : Math.min(real, floor);
+      shown += (target - shown) * (forced ? 0.3 : 0.12);
+      if (target === 1 && 1 - shown < 0.01) shown = 1;
+      num.textContent = String(Math.floor(shown * 100));
+      line.style.transform = `scaleX(${shown})`;
+      if (shown === 1) {
+        setTimeout(exit, HOLD);
+        return;
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+
+    // Hard stop: whatever happened, the loader is gone by MAX.
+    setTimeout(() => { ready(); finish(); }, Math.max(0, MAX - performance.now()));
   }
 
   /* Sticky header: hide on scroll down, show on scroll up ------------------ */

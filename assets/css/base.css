@@ -3,54 +3,43 @@
    Fonts, design tokens, reset, typography, utilities.
    ========================================================================== */
 
-/* Fonts: self-hosted variable woff2 (latin subset) ------------------------ */
+/* Fonts: Inter Tight, self-hosted static woff2 (latin), SIL OFL 1.1 ---------
+   Closest free match to the reference site's PP Neue Montreal (paid).
+   Book 400 -> headings and counter, Medium 500 -> body, labels, UI.
+   See docs/REFERENCE-NOTES.md. */
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/cormorant-garamond-latin.woff2") format("woff2");
-  font-weight: 300 700;
+  font-family: "Inter Tight";
+  src: url("/assets/fonts/inter-tight-latin-400.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/cormorant-garamond-italic-latin.woff2") format("woff2");
-  font-weight: 300 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("/assets/fonts/manrope-latin.woff2") format("woff2");
-  font-weight: 200 800;
+  font-family: "Inter Tight";
+  src: url("/assets/fonts/inter-tight-latin-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-/* Metric-matched fallbacks so the swap to web fonts does not shift layout.
-   Values computed from the woff2 files against Arial / Times New Roman. */
+/* Metric-matched Arial fallbacks so the swap does not shift layout.
+   Values computed from the woff2 files. */
 @font-face {
-  font-family: "Manrope Fallback";
+  font-family: "Inter Tight Fallback";
   src: local("Arial"), local("ArialMT");
-  size-adjust: 100.58%;
-  ascent-override: 105.98%;
-  descent-override: 29.83%;
+  font-weight: 400;
+  size-adjust: 96.96%;
+  ascent-override: 99.91%;
+  descent-override: 24.88%;
   line-gap-override: 0%;
 }
 @font-face {
-  font-family: "Cormorant Fallback";
-  src: local("Times New Roman"), local("TimesNewRomanPSMT");
-  size-adjust: 97.07%;
-  ascent-override: 95.19%;
-  descent-override: 29.57%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: "Cormorant Fallback";
-  src: local("Times New Roman Italic"), local("TimesNewRomanPS-ItalicMT");
-  font-style: italic;
-  size-adjust: 87.13%;
-  ascent-override: 106.05%;
-  descent-override: 32.94%;
+  font-family: "Inter Tight Fallback";
+  src: local("Arial"), local("ArialMT");
+  font-weight: 500;
+  size-adjust: 99.24%;
+  ascent-override: 97.62%;
+  descent-override: 24.31%;
   line-gap-override: 0%;
 }
 
@@ -70,19 +59,25 @@
   --danger: #A33A2A;
   --success: #3E6B45;
 
-  /* Type */
-  --font-serif: "Cormorant Garamond", "Cormorant Fallback", Georgia, serif;
-  --font-sans: "Manrope", "Manrope Fallback", Arial, sans-serif;
+  /* Type (reference scale, linear 390px -> 1440px; see docs/REFERENCE-NOTES.md) */
+  --font-sans: "Inter Tight", "Inter Tight Fallback", Arial, sans-serif;
 
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
-  --fs-base: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
-  --fs-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
-  --fs-h4: clamp(1.375rem, 1.25rem + 0.55vw, 1.75rem);
-  --fs-h3: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
-  --fs-h2: clamp(2.5rem, 1.85rem + 2.8vw, 4.5rem);
-  --fs-h1: clamp(3rem, 1.9rem + 4.8vw, 6.5rem);
-  --fs-display: clamp(3.5rem, 1.6rem + 8.2vw, 9.5rem);
+  --fs-label: clamp(0.75rem, 0.7036rem + 0.1905vw, 0.875rem);   /* 12 -> 14 */
+  --fs-base: clamp(0.875rem, 0.8286rem + 0.1905vw, 1rem);       /* 14 -> 16 */
+  --fs-lg: clamp(1rem, 0.9536rem + 0.1905vw, 1.125rem);         /* 16 -> 18 */
+  --fs-h4: clamp(1.125rem, 1.0786rem + 0.1905vw, 1.25rem);      /* 18 -> 20 */
+  --fs-h3: clamp(1.375rem, 1.1429rem + 0.9524vw, 2rem);         /* 22 -> 32 */
+  --fs-h2: clamp(1.75rem, 1.2857rem + 1.9048vw, 3rem);          /* 28 -> 48 */
+  --fs-h1: clamp(2.5rem, 2.0357rem + 1.9048vw, 3.75rem);        /* 40 -> 60 */
+
+  --lh-tight: 1.1;
+  --lh-text: 1.3;
+  --lh-label: 1.44;
+  --ls-h1: -0.1px;
+  --ls-text: 0.3px;
+  --ls-label: 0.5px;
+  --ls-nav: 0.02em;
+  --ls-btn: 0.01em;
 
   /* 8px spacing grid */
   --s-1: 0.5rem;   /*   8 */
@@ -102,7 +97,6 @@
   --section-pad: 4.5rem;       /* 72 mobile */
   --header-h: 4.5rem;          /* 72 mobile */
   --radius-sm: 0.5rem;
-  --radius: 1rem;
   --radius-pill: 999px;
 
   /* Motion */
@@ -115,7 +109,6 @@
   /* Layers */
   --z-float: 40;
   --z-header: 50;
-  --z-menu: 60;
   --z-cursor: 90;
   --z-preloader: 100;
 }
@@ -149,7 +142,9 @@ body {
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: var(--fs-base);
-  line-height: 1.65;
+  font-weight: 500;
+  line-height: var(--lh-text);
+  letter-spacing: var(--ls-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -172,51 +167,34 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Typography -------------------------------------------------------------- */
 h1, h2, h3, h4 {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.015em;
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-text);
   text-wrap: balance;
 }
-h1 { font-size: var(--fs-h1); font-weight: 400; }
-h2 { font-size: var(--fs-h2); font-weight: 400; }
-h3 { font-size: var(--fs-h3); line-height: 1.15; }
-h4 { font-size: var(--fs-h4); line-height: 1.2; letter-spacing: 0; }
-h1 em, h2 em, h3 em, .display em {
-  font-style: italic;
+h1 { font-size: var(--fs-h1); letter-spacing: var(--ls-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 500; line-height: var(--lh-text); }
+h4 { font-size: var(--fs-h4); font-weight: 500; line-height: var(--lh-text); }
+/* Accent words in headings: colour only (no italic face is loaded). */
+h1 em, h2 em, h3 em {
+  font-style: normal;
   color: var(--brown);
 }
 p { text-wrap: pretty; }
 
-.display {
-  font-family: var(--font-serif);
-  font-size: var(--fs-display);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.025em;
-}
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s-1);
-  font-family: var(--font-sans);
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  display: block;
+  font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
   color: var(--brown);
-}
-.eyebrow::before {
-  content: "";
-  width: var(--s-3);
-  height: 1px;
-  background: currentColor;
 }
 .lead {
   font-size: var(--fs-lg);
-  line-height: 1.6;
+  line-height: var(--lh-text);
   color: var(--text-muted);
-  max-width: 38em;
+  max-width: 34em;
 }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }

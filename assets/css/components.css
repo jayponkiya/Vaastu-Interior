@@ -32,9 +32,9 @@
   border-radius: var(--radius-pill);
   background: var(--btn-bg);
   color: var(--btn-fg);
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  letter-spacing: var(--ls-btn);
   line-height: 1.5rem;
   text-decoration: none;
   white-space: nowrap;
@@ -111,9 +111,9 @@
   align-items: center;
   gap: var(--s-1);
   padding-bottom: 0.25rem;
-  font-size: var(--fs-sm);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: var(--fs-base);
+  font-weight: 500;
+  letter-spacing: var(--ls-btn);
   text-decoration: none;
 }
 .link-arrow::after {
@@ -170,9 +170,9 @@
   border-top: 1px solid var(--line);
 }
 .card__num {
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--ls-label);
   color: var(--brown);
 }
 .section--dark .card__num { color: var(--gold); }
@@ -220,13 +220,13 @@
   border-top: 1px solid var(--line);
 }
 .stat__value {
-  font-family: var(--font-serif);
   font-size: var(--fs-h2);
+  font-weight: 400;
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 .stat__label {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-label);
   color: var(--text-muted);
 }
 
@@ -238,10 +238,9 @@
   padding: 0 0.75rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--ls-label);
   color: var(--text-muted);
 }
 .tag--solid {
@@ -271,10 +270,9 @@
   align-content: start;
 }
 .field__label {
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--ls-label);
 }
 .field__label .req { color: var(--brown); }
 .field__input {
@@ -299,10 +297,10 @@ select.field__input {
   background-position: right 0.25rem center;
   cursor: pointer;
 }
-.field__hint { font-size: var(--fs-xs); color: var(--text-muted); }
+.field__hint { font-size: var(--fs-label); color: var(--text-muted); }
 .field__error {
-  font-size: var(--fs-xs);
-  font-weight: 600;
+  font-size: var(--fs-label);
+  font-weight: 500;
   color: var(--danger);
 }
 .field__input:user-invalid,
@@ -316,7 +314,7 @@ select.field__input {
   display: flex;
   gap: var(--s-2);
   align-items: flex-start;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-label);
   color: var(--text-muted);
   cursor: pointer;
 }
@@ -371,7 +369,7 @@ select.field__input {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-label);
   font-weight: 500;
 }
 .choice span::before {
@@ -397,8 +395,8 @@ select.field__input {
 .form-status {
   padding: var(--s-2) var(--s-3);
   border-left: 2px solid currentColor;
-  font-size: var(--fs-sm);
-  font-weight: 600;
+  font-size: var(--fs-label);
+  font-weight: 500;
 }
 .form-status--success { color: var(--success); }
 .form-status--error { color: var(--danger); }
@@ -412,9 +410,8 @@ select.field__input {
   justify-content: space-between;
   gap: var(--s-3);
   padding-block: var(--s-3);
-  font-family: var(--font-serif);
   font-size: var(--fs-h4);
-  line-height: 1.25;
+  line-height: var(--lh-text);
   list-style: none;
   cursor: pointer;
 }

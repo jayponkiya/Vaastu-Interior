@@ -61,53 +61,89 @@
 }
 
 /* Preloader ----------------------------------------------------------------
-   Shown only on the first page view of a session (html.preloaded skips it).
-   CSS failsafe fades it out after 5s if the script never runs. */
+   Modelled on the reference loader (docs/REFERENCE-NOTES.md §2): dark panel,
+   brand top-left, full-width progress line, huge counter bottom-right, then
+   the panel lifts with a curved bottom edge. Overlay only; content stays in
+   the HTML. Shown on the first page view of a session when motion is OK
+   (html.motion-ok, not html.preloaded). main.js drives it; the CSS failsafe
+   hides it after 5.5s if the script never runs. */
 .preloader {
   position: fixed;
   inset: 0;
   z-index: var(--z-preloader);
   display: none;
-  place-items: center;
-  background: var(--espresso);
+  overflow: hidden;
 }
 .motion-ok:not(.preloaded) .preloader {
-  display: grid;
-  animation: preloader-failsafe 0.6s ease 5s forwards;
+  display: block;
+  animation: preloader-failsafe 0.4s ease 5.5s forwards;
 }
 .is-preloading { overflow: hidden; }
-.preloader.is-done {
+/* Paint the reserved scrollbar gutter dark too, so the overlay reads edge to edge. */
+html.motion-ok:not(.preloaded):not(.preloader-done) { background: var(--ink); }
+
+.preloader__panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--ink);
+  color: var(--cream);
+}
+.preloader__brand {
+  font-size: 1.125rem;          /* 18 */
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: var(--ls-text);
+  white-space: nowrap;
+}
+.preloader__char {
+  display: inline-block;
   opacity: 0;
-  transition: opacity 0.7s var(--ease-in-out);
-  pointer-events: none;
+  transform: translateY(10px);
 }
-.preloader__inner {
-  display: grid;
-  justify-items: center;
-  gap: var(--s-4);
-}
-.preloader__logo {
-  width: auto;
-  height: 6rem;
-  animation: preloader-logo 1s var(--ease-out) both;
-}
-.preloader__bar {
-  display: block;
-  width: 10rem;
-  height: 1px;
+.preloader__track {
+  height: 4px;
   overflow: hidden;
-  background: var(--line-light);
 }
-.preloader__progress {
+.preloader__line {
   display: block;
   height: 100%;
-  background: var(--gold);
+  background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.4s var(--ease-out);
 }
-@keyframes preloader-logo {
-  from { opacity: 0; transform: translateY(1rem); }
+.preloader__count {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  height: 0.8em;
+  font-size: clamp(8rem, 52vw, 12.5rem);   /* 200 at reference widths */
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+}
+.preloader__pct {
+  font-size: 0.24em;              /* 48 / 200 */
+  letter-spacing: -0.06em;        /* recomputed at its own size, like the reference */
+}
+/* Curved bottom edge: an ellipse hanging under the panel, scaled in on exit. */
+.preloader__curve {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -10%;
+  right: -10%;
+  height: 14vw;
+  border-radius: 0 0 50% 50%;
+  background: inherit;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+@media (min-width: 768px) {
+  .preloader__brand { font-size: 1.25rem; }  /* 20 */
 }
 @keyframes preloader-failsafe {
   to { opacity: 0; visibility: hidden; }
@@ -140,9 +176,8 @@
   align-items: center;
   gap: var(--s-4);
   padding-right: var(--s-4);
-  font-family: var(--font-serif);
   font-size: var(--fs-h3);
-  font-style: italic;
+  font-weight: 400;
   white-space: nowrap;
 }
 .marquee__item::after {
@@ -185,10 +220,9 @@
 .cursor.is-link .cursor__dot { transform: scale(0.5); opacity: 0.5; }
 .cursor.is-label .cursor__dot { transform: scale(1); opacity: 1; }
 .cursor__label {
-  font-size: var(--fs-xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: var(--ls-label);
   color: var(--ink);
   opacity: 0;
   transition: opacity var(--dur-fast) linear;

@@ -15,7 +15,7 @@ Static website for Vastu Interior, an interior design studio in Ahmedabad.
 
 ## Design tokens (from logo and favicon)
 --ink #171310, --espresso #2A1710, --brown #6B4C35, --gold #C9A36B, --cream #F5EFE6
-Headings: Cormorant Garamond. Body: Manrope. Self-hosted woff2, font-display: swap.
+Type: Inter Tight only (400 headings, 500 body/UI), the closest free match to the reference site's PP Neue Montreal. Self-hosted woff2, font-display: swap. Scale and timings: docs/REFERENCE-NOTES.md.
 8px spacing grid. Section padding 120px desktop / 72px mobile. Container max 1280px.
 Style reference: architects.framer.website, interiia.framer.website, arkode.framer.website (editorial, big type, white space, smooth animation).
 

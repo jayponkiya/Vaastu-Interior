@@ -14,8 +14,8 @@
       }
     })(document.documentElement);
   </script>
-  <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-tight-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/layout.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -82,10 +82,12 @@
   <!-- partial:header -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="preloader" aria-hidden="true">
-    <div class="preloader__inner">
-      <img class="preloader__logo" src="/assets/img/brand/logo-light.webp" width="480" height="301" alt="" loading="lazy" decoding="async">
-      <span class="preloader__bar"><span class="preloader__progress"></span></span>
+  <div class="preloader" aria-hidden="true" data-preloader>
+    <div class="preloader__panel">
+      <div class="preloader__brand">Vastu Interior</div>
+      <div class="preloader__track"><span class="preloader__line"></span></div>
+      <div class="preloader__count"><span class="preloader__num">0</span><span class="preloader__pct">%</span></div>
+      <span class="preloader__curve"></span>
     </div>
   </div>
 
@@ -146,7 +148,7 @@
     <section class="section section--dark section--hero">
       <div class="container flow" style="--flow-space: var(--s-4)">
         <p class="eyebrow" data-reveal="fade">Interior design studio · Ahmedabad</p>
-        <h1 class="display" data-split>Interiors that feel <em>calm, considered</em> and completely yours</h1>
+        <h1 data-split>Interiors that feel <em>calm, considered</em> and completely yours</h1>
         <p class="lead" data-reveal="fade-up" data-delay="0.3">We plan, visualise and build homes, offices and showrooms across Ahmedabad, so you see every room in 3D before a single wall is touched.</p>
         <div class="btn-group" data-reveal="fade-up" data-delay="0.45">
           <a class="btn btn--light" href="/get-quote">
