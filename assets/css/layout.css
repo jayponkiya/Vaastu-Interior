@@ -471,6 +471,11 @@ html.menu-open { overflow: hidden; }
 @media (max-width: 767.98px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-3); }
   .footer-brand, .footer-visit { grid-column: 1 / -1; }
+  .site-footer .footer-brand p { max-width: none; }
+  /* Address on one flowing line; phone and email share a row when they fit. */
+  .site-footer .footer-visit address { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); }
+  .footer-visit address > span { flex-basis: 100%; }
+  .footer-visit address br { display: none; }
 }
 @media (min-width: 768px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
