@@ -467,6 +467,11 @@ html.menu-open { overflow: hidden; }
   gap: var(--s-5);
   padding-block: var(--section-pad) var(--s-8);
 }
+/* Phones: logo and studio address full width, Studio + Services side by side. */
+@media (max-width: 767.98px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-3); }
+  .footer-brand, .footer-visit { grid-column: 1 / -1; }
+}
 @media (min-width: 768px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -520,6 +525,11 @@ html.menu-open { overflow: hidden; }
   display: flex;
   flex-wrap: wrap;
   gap: var(--s-3);
+}
+/* Phones and tablets: copyright and policy links stacked and centred. */
+@media (max-width: 1023.98px) {
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .footer-bottom ul { justify-content: center; }
 }
 .footer-bottom a { text-decoration: none; }
 .footer-bottom a:hover { text-decoration: underline; }
