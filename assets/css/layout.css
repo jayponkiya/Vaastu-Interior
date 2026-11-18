@@ -226,10 +226,13 @@
 .site-header__logo .logo {
   grid-area: 1 / 1;
   width: auto;
-  height: 2.5rem;             /* 40, fits the 64px header */
+  height: 40px;               /* header mark: bold, cropped logo (logo-mark*.webp) */
   transition: opacity var(--dur) var(--ease-out);
 }
 .logo--light { opacity: 0; }
+@media (min-width: 1024px) {
+  .site-header__logo .logo { height: 52px; }
+}
 
 /* Pages with a dark hero set <body data-header-theme="light">. */
 [data-header-theme="light"] .site-header:not(.is-scrolled),
@@ -439,7 +442,7 @@ html.menu-open { overflow: hidden; }
 }
 .footer-brand .logo {
   width: auto;
-  height: 4.5rem;
+  height: 64px;
   margin-bottom: var(--s-3);
 }
 .footer-brand p {

@@ -120,6 +120,9 @@
     --section-pad: 60px;
   }
 }
+@media (min-width: 1024px) {
+  :root { --header-h: 72px; }   /* room for a 52px logo */
+}
 @media (min-width: 1200px) {
   :root {
     --gutter: 60px;
