@@ -67,9 +67,22 @@
 }
 .hero__media > img,
 .hero__media > video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+/* The video sits over its poster image and fades in once it is actually playing. */
+.hero__video {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease-out);
+}
+.hero__video.is-playing { opacity: 1; }
+/* Portrait screens crop most of the 16:9 frame: keep the furnished side in view. */
+@media (max-width: 767px) {
+  .hero__media > img,
+  .hero__media > video { object-position: 68% 50%; }
 }
 .hero__inner {
   display: grid;

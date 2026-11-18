@@ -43,6 +43,7 @@
   <title>Interior Design Studio in Ahmedabad | Vastu Interior</title>
   <meta name="description" content="Vastu Interior designs and builds homes, offices and showrooms in Ahmedabad, from space planning and 3D visualisation to turnkey execution and handover.">
   <meta name="robots" content="noindex">
+  <link rel="preload" as="image" href="/assets/img/hero/hero-living-room-poster-1280.webp" imagesrcset="/assets/img/hero/hero-living-room-poster-1280.webp 1280w, /assets/img/hero/hero-living-room-poster-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
   <link rel="canonical" href="https://www.vastuinterior.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Interior Design Studio in Ahmedabad | Vastu Interior">
@@ -149,8 +150,20 @@
          Layout and reveal follow docs/REFERENCE-NOTES.md §3. -->
     <section class="hero">
       <div class="hero__media">
-        <!-- DEMO: placeholder image until real photography or video arrives -->
-        <img src="/assets/img/hero/placeholder-hero.webp" width="1600" height="900" alt="Placeholder for a living room photograph" fetchpriority="high" decoding="async">
+        <!-- Stock footage (Pexels, credits in docs/image-credits.md), not a Vastu Interior project.
+             The poster image is the LCP element; main.js fades the muted video in once it plays
+             and never starts it under reduced motion or data saver. -->
+        <img src="/assets/img/hero/hero-living-room-poster-1280.webp"
+             srcset="/assets/img/hero/hero-living-room-poster-1280.webp 1280w, /assets/img/hero/hero-living-room-poster-1920.webp 1920w"
+             sizes="100vw" width="1920" height="1080"
+             alt="Living room with walnut wall panelling, a cream sofa and a low wooden table"
+             fetchpriority="high" decoding="async">
+        <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-hero-video>
+          <source src="/assets/video/hero-living-room-1280x720.webm" type="video/webm" media="(max-width: 1279px)">
+          <source src="/assets/video/hero-living-room-1280x720.mp4" type="video/mp4" media="(max-width: 1279px)">
+          <source src="/assets/video/hero-living-room-1920x1080.webm" type="video/webm">
+          <source src="/assets/video/hero-living-room-1920x1080.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="hero__inner">
         <h1 class="hero__title" data-hero="title">Interiors that feel calm, considered and completely yours</h1>

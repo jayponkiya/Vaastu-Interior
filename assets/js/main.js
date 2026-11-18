@@ -282,9 +282,47 @@
     document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = year; });
   }
 
+  /* Hero background video ---------------------------------------------------
+     The poster <img> is what loads first (and what search engines and LCP see).
+     The muted video only starts once the page is ready (after the preloader),
+     fades in when frames are actually playing, pauses when scrolled out of
+     view or the tab is hidden, and never loads under reduced motion or Data
+     Saver. preload="none" in the HTML keeps it from competing with the page. */
+  function initHeroVideo() {
+    const video = document.querySelector('[data-hero-video]');
+    if (!video) return;
+    if (navigator.connection && navigator.connection.saveData) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let ready = false;
+    let inView = true;
+
+    const play = () => {
+      if (!ready || !inView || document.hidden || reduce.matches) return;
+      const p = video.play();
+      if (p && p.catch) p.catch(() => { /* autoplay refused: poster stays */ });
+    };
+    const pause = () => { if (!video.paused) video.pause(); };
+
+    video.addEventListener('playing', () => video.classList.add('is-playing'));
+    reduce.addEventListener('change', (e) => {
+      if (e.matches) { pause(); video.classList.remove('is-playing'); } else play();
+    });
+    document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        inView = entry.isIntersecting;
+        if (inView) play(); else pause();
+      }).observe(video);
+    }
+    const start = () => { ready = true; play(); };
+    if (window.viReady) start();
+    else document.addEventListener('vi:ready', start, { once: true });
+  }
+
   initPreloader();
   initHeader();
   initMenu();
   initActiveNav();
   initYear();
+  initHeroVideo();
 })();
