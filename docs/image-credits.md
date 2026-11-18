@@ -80,3 +80,18 @@ Project images are stock photos standing in for sample projects. They are **not*
 | File | Source | Photographer | License | Alt text |
 |---|---|---|---|---|
 | `assets/img/about/rutvik-virani-founder-vastu-interior-{480,768,1086}.webp` | Supplied by Vastu Interior | Not stated | Client-owned; used with permission on this site | Er. Rutvik Virani, founder and director of Vastu Interior |
+
+## Sample projects - replace with real data
+
+All six projects on `/projects/` are **sample concepts**, not Vastu Interior client work. The photos are the Pexels stock images credited above; the location, area, year, scope, story text and project type are made up for illustration. Each page says "Sample concept" on screen, carries a SAMPLE PROJECT code comment and sets `creativeWorkStatus: "Sample concept"` in its JSON-LD. Replace each one with a real project (or remove it) before launch, and update the home page cards and the related-project links on the service pages to match.
+
+| Page | Sample data on the page | Images |
+|---|---|---|
+| `projects/modern-3bhk-sg-highway/index.html` | Modern 3BHK, SG Highway: Location SG Highway, Ahmedabad; Area Approx. 1,650 sq ft; Type 3BHK apartment; Year 2025; Scope Full home design, 3D, execution; story text | `assets/img/projects/modern-3bhk-sg-highway/*` (stock), plus the generated concept sketch `3bhk-living-room-slatted-wall-sketch-{480,768,1280,1920}.webp` |
+| `projects/luxury-bungalow-bodakdev/index.html` | Bungalow, Bodakdev: Location Bodakdev, Ahmedabad; Area Approx. 4,800 sq ft; Type Independent bungalow; Year 2025; Scope Interiors, Vastu planning, turnkey execution; story text | `assets/img/projects/luxury-bungalow-bodakdev/*` (stock) |
+| `projects/corporate-office-ahmedabad/index.html` | Corporate office, Ahmedabad: Location Prahlad Nagar, Ahmedabad; Area Approx. 6,000 sq ft; Type Corporate office; Year 2024; Scope Space planning, design, drawings, fit-out; story text | `assets/img/projects/corporate-office-ahmedabad/*` (stock) |
+| `projects/retail-showroom-ahmedabad/index.html` | Retail showroom, Ahmedabad: Location Sindhu Bhavan Road, Ahmedabad; Area Approx. 3,200 sq ft; Type Retail showroom; Year 2024; Scope Layout, display design, lighting, fit-out; story text | `assets/img/projects/retail-showroom-ahmedabad/*` (stock) |
+| `projects/modular-kitchen-wardrobe/index.html` | Modular kitchen and wardrobe: Location Bopal, Ahmedabad; Area Kitchen approx. 140 sq ft, wardrobe approx. 90 sq ft; Type Modular kitchen and wardrobe; Year 2025; Scope Design, 3D, production, installation; story text | `assets/img/projects/modular-kitchen-wardrobe/*` (stock), plus the generated concept sketch `kitchen-oak-island-table-sketch-{480,768,1280,1920}.webp` |
+| `projects/minimal-2bhk-home/index.html` | Minimal 2BHK home: Location Gota, Ahmedabad; Area Approx. 1,100 sq ft; Type 2BHK apartment; Year 2025; Scope Space planning, design, execution; story text | `assets/img/projects/minimal-2bhk-home/*` (stock), plus the generated concept sketch `minimal-living-walnut-media-wall-sketch-{480,768,1280,1920}.webp` |
+
+The **concept sketch** images used in the before/after sliders (3BHK, 2BHK, modular kitchen) are line drawings generated from the stock photo with sharp (greyscale, edge detection, warm tint). They are placeholders, not real design drawings: replace them with the real 3D view or site photo for each project.
