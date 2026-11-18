@@ -201,39 +201,94 @@
 }
 .service-preview img.is-active { opacity: 1; }
 
-/* 05 Projects: image + text rows ---------------------------------------------- */
-.project-row {
+/* 05 Projects: stacked cards -------------------------------------------------
+   Default (no JS / reduced motion): a vertical list of cards.
+   .is-stacked (animations.js initProjectStack): the stack pins below the
+   header, every card takes the same height and later cards slide up over
+   earlier ones, which step back (scale + lift) to show a layered edge. */
+.project-stack {
+  display: grid;
+  gap: var(--s-3);
+  --card-h: calc(100svh - var(--header-h) - 72px);
+}
+.project-card {
   position: relative;
   display: grid;
-  gap: var(--s-2) var(--col-gap);
-  padding-block: var(--s-3);
-  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  box-shadow: 0 0 0 1px var(--line), 0 24px 48px -32px rgb(23 19 16 / 0.35);
+  transform-origin: 50% 0;
 }
-.media--project { --ratio: 5 / 4; }
-.project-row .media > img {
+.project-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--espresso);
+}
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform var(--dur-slow) var(--ease-out);
 }
-.project-row:hover .media > img { transform: scale(1.04); }
-.project-row__body {
-  display: grid;
-  align-content: start;
+.project-card:hover .project-card__media img { transform: scale(1.04); }
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--s-2);
+  padding: var(--s-3);
 }
-.project-row__title { font-size: var(--fs-h4); }
-.project-row__title a { text-decoration: none; }
-.project-row__title a::after {
+.project-card__count {
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.project-card__count span { color: var(--ink); }
+.project-card__title { font-size: var(--fs-h3); font-weight: 400; line-height: var(--lh-tight); }
+.project-card__title a { text-decoration: none; }
+.project-card__title a::after {          /* whole card is the link */
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
 }
+.project-card__text { color: var(--text-muted); max-width: 30em; }
+.project-card__more { margin-top: auto; }
+.project-card:hover .project-card__more::after { transform: scaleX(1); transform-origin: left; }
+
 @media (min-width: 768px) {
-  .project-row {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    padding-block: var(--s-5);
+  .project-stack { --card-h: clamp(420px, calc(100svh - var(--header-h) - 120px), 620px); }
+  .project-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+    min-height: 420px;
   }
+  .project-card__media { aspect-ratio: auto; }
+  .project-card__body { padding: var(--s-4); }
 }
 @media (min-width: 1200px) {
-  .project-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); padding-block: var(--s-6); }
+  .project-card { grid-template-columns: minmax(0, 1fr) var(--col-side); }
+  .project-card__body { padding: var(--s-5); }
+}
+
+/* Stacked (pinned) mode */
+.projects.is-stacked .project-stack {
+  position: relative;
+  height: var(--card-h);
+  gap: 0;
+}
+.projects.is-stacked .project-card {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  will-change: transform;
+}
+@media (max-width: 767px) {
+  .projects.is-stacked .project-card { grid-template-rows: minmax(0, 1fr) auto; }
+  .projects.is-stacked .project-card__media { aspect-ratio: auto; }
+  .projects.is-stacked .project-card__text { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 }
 
 /* 06 Process timeline ---------------------------------------------------------- */

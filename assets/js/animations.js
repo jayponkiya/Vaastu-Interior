@@ -280,6 +280,58 @@
     });
   }
 
+  /* Project card stack -----------------------------------------------------
+     [data-project-stack]: when the stack reaches the top it pins. Scrolling
+     then slides each card up over the previous one (~0.85 viewport of scroll
+     per card) while earlier cards scale back and lift to leave a layered
+     edge. The pin releases after the last card, so the next section only
+     starts once every card has been shown. Needs a viewport at least 560px
+     tall; shorter screens keep the plain list. */
+  function initProjectStack() {
+    const section = document.querySelector('[data-project-stack]');
+    if (!section) return;
+    mm.add('(min-height: 560px)', () => {
+      const stack = section.querySelector('.project-stack');
+      const cards = gsap.utils.toArray(stack.querySelectorAll('.project-card'));
+      if (cards.length < 2) return undefined;
+      section.classList.add('is-stacked');
+
+      const header = document.querySelector('[data-header]');
+      const offset = () => (header ? header.offsetHeight : 64) + (window.innerWidth >= 768 ? 48 : 28);
+      const STEP = 14;      // px each earlier card lifts per card stacked on top of it
+      const SHRINK = 0.045; // scale lost per card stacked on top of it
+
+      // Waiting cards sit a full viewport down, below the fold, until their turn.
+      const below = () => window.innerHeight;
+      gsap.set(cards.slice(1), { y: below });
+      const tl = gsap.timeline({
+        defaults: { ease: 'none' },
+        scrollTrigger: {
+          trigger: stack,
+          start: () => `top top+=${offset()}`,
+          end: () => `+=${Math.round((cards.length - 1) * window.innerHeight * 0.85)}`,
+          pin: true,
+          scrub: 0.6,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+      cards.slice(1).forEach((card, i) => {
+        tl.fromTo(card, { y: below }, { y: 0, ease: 'power2.out', duration: 1, immediateRender: false }, i);
+        cards.slice(0, i + 1).forEach((prev, k) => {
+          const depth = i + 1 - k;
+          tl.to(prev, { scale: 1 - depth * SHRINK, y: -depth * STEP, duration: 1 }, i);
+        });
+      });
+      tl.to({}, { duration: 0.35 });   // short hold on the last card before release
+
+      return () => {
+        section.classList.remove('is-stacked');
+        gsap.set(cards, { clearProps: 'transform' });
+      };
+    });
+  }
+
   /* Turn everything off if the visitor switches on reduced motion ---------- */
   function disableAll() {
     mm.revert();
@@ -311,6 +363,7 @@
     initReveals();
     initParallax();
     initCounters();
+    initProjectStack();
     initProcess();
     initCursor();
     ScrollTrigger.refresh();

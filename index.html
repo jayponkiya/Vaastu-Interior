@@ -384,8 +384,12 @@
          SAMPLE PROJECTS: design concepts illustrated with stock photography
          (Pexels, see docs/image-credits.md). These are NOT completed Vastu
          Interior projects and must not be presented as real client work.
-         Replace with real projects and photos when available. -->
-    <section class="section" aria-labelledby="projects-title">
+         Replace with real projects and photos when available.
+         Stacked cards: with motion, animations.js initProjectStack pins the
+         stack and slides each card up over the previous one; the next section
+         only scrolls in after the last card. Without motion (or JS) the
+         cards are a plain vertical list. -->
+    <section class="section projects" aria-labelledby="projects-title" data-project-stack>
       <div class="container">
         <div class="section-head">
           <div class="flow">
@@ -394,63 +398,71 @@
           </div>
           <p class="text-muted" data-reveal="fade-up">Sample concepts that show our approach to homes, offices and showrooms. Photographs are illustrative.</p>
         </div>
-        <div class="project-list">
-          <article class="project-row" data-cursor="View" data-reveal="fade-up">
-            <div class="media media--project">
-              <img src="/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp"
-                   srcset="/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-480.webp 480w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp 768w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-1280.webp 1280w"
-                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1097"
-                   alt="Living room with a boucle sofa, slatted oak TV wall and floating shelves"
-                   loading="lazy" decoding="async">
-            </div>
-            <div class="project-row__body">
-              <ul class="tag-list" role="list"><li class="tag">Residential</li><li class="tag">Sample concept</li></ul>
-              <h3 class="project-row__title"><a href="/projects/modern-3bhk-sg-highway/">Modern 3BHK, SG Highway</a></h3>
-              <p class="text-muted">Oak slats, warm white walls and built-in storage for a family apartment that needs to stay calm and easy to clean.</p>
-            </div>
-          </article>
-          <article class="project-row" data-cursor="View" data-reveal="fade-up">
-            <div class="media media--project">
-              <img src="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp"
-                   srcset="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-480.webp 480w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp 768w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-1280.webp 1280w"
-                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1080"
-                   alt="Double-height living room with a white sofa, slatted wood wall and garden courtyard"
-                   loading="lazy" decoding="async">
-            </div>
-            <div class="project-row__body">
-              <ul class="tag-list" role="list"><li class="tag">Residential</li><li class="tag">Sample concept</li></ul>
-              <h3 class="project-row__title"><a href="/projects/luxury-bungalow-bodakdev/">Bungalow, Bodakdev</a></h3>
-              <p class="text-muted">A double-height living room opened to the garden, with timber, stone and deep shade where the afternoon sun comes in.</p>
-            </div>
-          </article>
-          <article class="project-row" data-cursor="View" data-reveal="fade-up">
-            <div class="media media--project">
-              <img src="/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp"
-                   srcset="/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-480.webp 480w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp 768w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-1280.webp 1280w"
-                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1280"
-                   alt="Glass-walled conference room with an oak table and wood-backed chairs"
-                   loading="lazy" decoding="async">
-            </div>
-            <div class="project-row__body">
-              <ul class="tag-list" role="list"><li class="tag">Commercial</li><li class="tag">Sample concept</li></ul>
-              <h3 class="project-row__title"><a href="/projects/corporate-office-ahmedabad/">Corporate office, Ahmedabad</a></h3>
-              <p class="text-muted">Glass meeting rooms, acoustic panels and oak worktops for a team that splits its week between focus work and clients.</p>
-            </div>
-          </article>
-          <article class="project-row" data-cursor="View" data-reveal="fade-up">
-            <div class="media media--project">
-              <img src="/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp"
-                   srcset="/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-480.webp 480w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp 768w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-1280.webp 1280w"
-                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1280"
-                   alt="Kitchen with an oak island table, bar stools and white tall units"
-                   loading="lazy" decoding="async">
-            </div>
-            <div class="project-row__body">
-              <ul class="tag-list" role="list"><li class="tag">Modular</li><li class="tag">Sample concept</li></ul>
-              <h3 class="project-row__title"><a href="/projects/modular-kitchen-wardrobe/">Modular kitchen &amp; wardrobes</a></h3>
-              <p class="text-muted">An island that doubles as the breakfast table, tall units for a busy pantry and wardrobes planned shelf by shelf.</p>
-            </div>
-          </article>
+        <div class="project-stack">
+            <article class="project-card" data-cursor="View">
+              <div class="project-card__media">
+                <img src="/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp"
+                     srcset="/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-480.webp 480w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp 768w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-1280.webp 1280w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-1920.webp 1920w"
+                     sizes="(min-width: 1200px) 60vw, (min-width: 768px) 55vw, 92vw" width="1920" height="1097"
+                     alt="Living room with a boucle sofa, slatted oak TV wall and floating shelves"
+                     loading="lazy" decoding="async">
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__count"><span>01</span> / 04</p>
+                <ul class="tag-list" role="list"><li class="tag">Residential</li><li class="tag">Apartment</li><li class="tag">Sample concept</li></ul>
+                <h3 class="project-card__title"><a href="/projects/modern-3bhk-sg-highway/">Modern 3BHK, SG Highway</a></h3>
+                <p class="project-card__text">Oak slats, warm white walls and built-in storage for a family apartment that needs to stay calm and easy to clean.</p>
+                <span class="link-line project-card__more" aria-hidden="true">View project</span>
+              </div>
+            </article>
+            <article class="project-card" data-cursor="View">
+              <div class="project-card__media">
+                <img src="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp"
+                     srcset="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-480.webp 480w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp 768w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-1280.webp 1280w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-1920.webp 1920w"
+                     sizes="(min-width: 1200px) 60vw, (min-width: 768px) 55vw, 92vw" width="1920" height="1080"
+                     alt="Double-height living room with a white sofa, slatted wood wall and garden courtyard"
+                     loading="lazy" decoding="async">
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__count"><span>02</span> / 04</p>
+                <ul class="tag-list" role="list"><li class="tag">Residential</li><li class="tag">Bungalow</li><li class="tag">Sample concept</li></ul>
+                <h3 class="project-card__title"><a href="/projects/luxury-bungalow-bodakdev/">Bungalow, Bodakdev</a></h3>
+                <p class="project-card__text">A double-height living room opened to the garden, with timber, stone and deep shade where the afternoon sun comes in.</p>
+                <span class="link-line project-card__more" aria-hidden="true">View project</span>
+              </div>
+            </article>
+            <article class="project-card" data-cursor="View">
+              <div class="project-card__media">
+                <img src="/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp"
+                     srcset="/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-480.webp 480w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp 768w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-1280.webp 1280w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-1920.webp 1920w"
+                     sizes="(min-width: 1200px) 60vw, (min-width: 768px) 55vw, 92vw" width="1920" height="1280"
+                     alt="Glass-walled conference room with an oak table and wood-backed chairs"
+                     loading="lazy" decoding="async">
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__count"><span>03</span> / 04</p>
+                <ul class="tag-list" role="list"><li class="tag">Commercial</li><li class="tag">Office</li><li class="tag">Sample concept</li></ul>
+                <h3 class="project-card__title"><a href="/projects/corporate-office-ahmedabad/">Corporate office, Ahmedabad</a></h3>
+                <p class="project-card__text">Glass meeting rooms, acoustic panels and oak worktops for a team that splits its week between focus work and clients.</p>
+                <span class="link-line project-card__more" aria-hidden="true">View project</span>
+              </div>
+            </article>
+            <article class="project-card" data-cursor="View">
+              <div class="project-card__media">
+                <img src="/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp"
+                     srcset="/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-480.webp 480w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp 768w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-1280.webp 1280w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-1920.webp 1920w"
+                     sizes="(min-width: 1200px) 60vw, (min-width: 768px) 55vw, 92vw" width="1920" height="1280"
+                     alt="Kitchen with an oak island table, bar stools and white tall units"
+                     loading="lazy" decoding="async">
+              </div>
+              <div class="project-card__body">
+                <p class="project-card__count"><span>04</span> / 04</p>
+                <ul class="tag-list" role="list"><li class="tag">Modular</li><li class="tag">Kitchen & wardrobes</li><li class="tag">Sample concept</li></ul>
+                <h3 class="project-card__title"><a href="/projects/modular-kitchen-wardrobe/">Modular kitchen &amp; wardrobes</a></h3>
+                <p class="project-card__text">An island that doubles as the breakfast table, tall units for a busy pantry and wardrobes planned shelf by shelf.</p>
+                <span class="link-line project-card__more" aria-hidden="true">View project</span>
+              </div>
+            </article>
         </div>
         <a class="link-line section-link" href="/projects/">See all projects</a>
       </div>
