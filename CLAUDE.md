@@ -6,6 +6,8 @@ Static website for Vastu Interior, an interior design studio in Ahmedabad.
 - Allowed libraries (self-hosted in assets/js/vendor/, pinned versions): GSAP, ScrollTrigger, Lenis.
 - Clean folder URLs: /services/ = services/index.html. Internal links are root-relative.
 - Header, footer and head partials are repeated in every HTML file, kept identical with scripts/sync-layout.js.
+- Pages load minified bundles (site.min.css, pages.min.css, site.min.js, components.min.js, forms.min.js) with ?v=hash. Edit the sources, then run `node scripts/build-assets.js` (minifies, updates references, syncs partials).
+- Before release: `node scripts/seo-audit.js` must pass, then `node scripts/generate-sitemap.js`.
 
 ## Business details (single source of truth)
 - Name: Vastu Interior

@@ -1,0 +1,7 @@
+# Vastu Interior — https://vaastuinterior.in
+User-agent: *
+Allow: /
+Disallow: /thank-you
+Disallow: /404
+
+Sitemap: https://vaastuinterior.in/sitemap.xml

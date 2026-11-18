@@ -23,7 +23,9 @@
                                               visitor presses send.
        'https://formspree.io/f/<form-id>'  -> Formspree (posts the form).
        '<web3forms-access-key>'            -> Web3Forms (any other value is
-                                              treated as an access key).        */
+                                              treated as an access key).
+     Pages load forms.min.js: run `node scripts/build-assets.js` after
+     changing this value (or anything else in this file).                       */
   const FORM_BACKEND = '';
 
   const WHATSAPP = '916359031530';

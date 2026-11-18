@@ -1,0 +1,31 @@
+# Redirects (Netlify format). Canonical URLs: https://vaastuinterior.in, no www,
+# single pages without a trailing slash (/about), directory pages with one
+# (/services/, /services/<slug>/), matching the canonical links on each page.
+#
+# Trailing slashes: the host already adds the slash to directory pages and
+# serves /about for about.html (Netlify: enable Pretty URLs; Cloudflare Pages
+# does this by default). Rules for those are left out on purpose: Netlify
+# ignores trailing slashes when matching, so "/about/ -> /about" would loop.
+
+# www -> non-www. Cloudflare Pages ignores host-based rules in this file:
+# there, add a Redirect Rule for www.vaastuinterior.in in the dashboard.
+https://www.vaastuinterior.in/*  https://vaastuinterior.in/:splat  301!
+http://www.vaastuinterior.in/*   https://vaastuinterior.in/:splat  301!
+
+# .html and index.html addresses -> clean canonical URLs
+/index.html                         /                             301!
+/about.html                         /about                        301!
+/contact.html                       /contact                      301!
+/faq.html                           /faq                          301!
+/get-quote.html                     /get-quote                    301!
+/privacy-policy.html                /privacy-policy               301!
+/process.html                       /process                      301!
+/sitemap.html                       /sitemap                      301!
+/terms.html                         /terms                        301!
+/testimonials.html                  /testimonials                 301!
+/thank-you.html                     /thank-you                    301!
+/why-choose-us.html                 /why-choose-us                301!
+/services/index.html                /services/                    301!
+/services/:slug/index.html          /services/:slug/              301!
+/projects/index.html                /projects/                    301!
+/projects/:slug/index.html          /projects/:slug/              301!
