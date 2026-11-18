@@ -347,6 +347,25 @@
     });
   }
 
+  /* Step index rail (process page) -----------------------------------------
+     [data-step-nav]: the rail beside the sticky step list fills from the
+     first step to the last as you scroll. Active-step marking lives in
+     components.js so it also works without motion. */
+  function initStepRail() {
+    const nav = document.querySelector('[data-step-nav]');
+    if (!nav) return;
+    const fill = nav.querySelector('.steps-nav__fill');
+    const ids = [...nav.querySelectorAll('a[href^="#"]')].map((a) => a.getAttribute('href').slice(1));
+    const first = document.getElementById(ids[0]);
+    const last = document.getElementById(ids[ids.length - 1]);
+    if (!fill || !first || !last) return;
+    gsap.fromTo(fill, { scaleY: 0 }, {
+      scaleY: 1,
+      ease: 'none',
+      scrollTrigger: { trigger: first, start: 'top center', endTrigger: last, end: 'bottom center', scrub: 0.3 },
+    });
+  }
+
   /* Turn everything off if the visitor switches on reduced motion ---------- */
   function disableAll() {
     mm.revert();
@@ -380,6 +399,7 @@
     initCounters();
     initProjectStack();
     initProcess();
+    initStepRail();
     initCursor();
     ScrollTrigger.refresh();
   };

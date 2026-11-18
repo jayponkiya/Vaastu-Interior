@@ -124,6 +124,47 @@
     });
   }
 
+  /* Accordion --------------------------------------------------------------
+     Native <details data-accordion>. Opening fades/slides the panel in (CSS
+     keyframe); closing fades it out first, then collapses. Opacity and
+     transform only; instant under reduced motion. */
+  function initAccordion(item) {
+    const summary = item.querySelector('summary');
+    const panel = item.querySelector('.accordion__panel');
+    if (!summary || !panel || typeof panel.animate !== 'function') return;
+    let closing = false;
+    summary.addEventListener('click', (e) => {
+      if (!item.open || closing || reduce.matches) return;
+      e.preventDefault();
+      closing = true;
+      const anim = panel.animate(
+        [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-0.5rem)' }],
+        { duration: 200, easing: 'cubic-bezier(0.4, 0, 1, 1)' },
+      );
+      anim.onfinish = () => { item.open = false; closing = false; };
+    });
+  }
+
+  /* Step index (process page) ----------------------------------------------
+     [data-step-nav]: marks the link for the step nearest the middle of the
+     viewport. Works with or without GSAP. */
+  function initStepNav(nav) {
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const steps = links.map((a) => document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+    if (!steps.length || !('IntersectionObserver' in window)) return;
+    const setActive = (i) => links.forEach((a, k) => {
+      a.classList.toggle('is-active', k === i);
+      if (k === i) a.setAttribute('aria-current', 'step'); else a.removeAttribute('aria-current');
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (entry.isIntersecting) setActive(steps.indexOf(entry.target)); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    steps.forEach((s) => io.observe(s));
+    setActive(0);
+  }
+
   document.querySelectorAll('[data-slider]').forEach(initSlider);
   document.querySelectorAll('[data-service-preview]').forEach(initServicePreview);
+  document.querySelectorAll('details[data-accordion]').forEach(initAccordion);
+  document.querySelectorAll('[data-step-nav]').forEach(initStepNav);
 })();
