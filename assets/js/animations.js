@@ -107,7 +107,7 @@
   function initHero() {
     const title = document.querySelector('[data-hero="title"]');
     if (title) {
-      title.setAttribute('aria-label', title.textContent.replace(/s+/g, ' ').trim());
+      title.setAttribute('aria-label', title.textContent.replace(/\s+/g, ' ').trim());
       splitWords(title);
       const words = [...title.querySelectorAll('.split-word')];
       words.forEach((w) => w.classList.add('split-word--free'));
@@ -241,8 +241,48 @@
     });
   }
 
+  /* Process timeline -------------------------------------------------------
+     [data-process] on large screens: the section pins for 1.5 viewports, the
+     rail fills left to right with the scroll and each step lights up as the
+     fill reaches it. Small screens keep the plain vertical list. */
+  const mm = gsap.matchMedia();
+  function initProcess() {
+    const section = document.querySelector('[data-process]');
+    if (!section) return;
+    mm.add('(min-width: 1024px)', () => {
+      const steps = [...section.querySelectorAll('.process__step')];
+      const fill = section.querySelector('.process__fill');
+      let active = -1;
+      const setActive = (i) => {
+        if (i === active) return;
+        active = i;
+        steps.forEach((step, k) => step.classList.toggle('is-active', k <= i));
+      };
+      section.classList.add('is-live');
+      setActive(0);
+      gsap.fromTo(fill, { scaleX: 0 }, {
+        scaleX: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: () => `+=${Math.round(window.innerHeight * 1.5)}`,
+          pin: true,
+          scrub: 0.4,
+          invalidateOnRefresh: true,
+          onUpdate: (self) => setActive(Math.min(steps.length - 1, Math.floor(self.progress * steps.length))),
+        },
+      });
+      return () => {
+        section.classList.remove('is-live');
+        steps.forEach((step) => step.classList.remove('is-active'));
+      };
+    });
+  }
+
   /* Turn everything off if the visitor switches on reduced motion ---------- */
   function disableAll() {
+    mm.revert();
     ScrollTrigger.getAll().forEach((t) => t.kill());
     gsap.killTweensOf('*');
     if (lenis) lenis.destroy();
@@ -271,6 +311,7 @@
     initReveals();
     initParallax();
     initCounters();
+    initProcess();
     initCursor();
     ScrollTrigger.refresh();
   };

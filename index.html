@@ -36,46 +36,81 @@
   <script src="/assets/js/animations.js" defer></script>
   <!-- /partial:head -->
 
-  <!--
-    TEMPORARY DEMO PAGE (phase 1). Shows the layout, components and motion
-    system. Replaced by the real home page in a later phase.
-  -->
-  <title>Interior Design Studio in Ahmedabad | Vastu Interior</title>
-  <meta name="description" content="Vastu Interior designs and builds homes, offices and showrooms in Ahmedabad, from space planning and 3D visualisation to turnkey execution and handover.">
-  <meta name="robots" content="noindex">
-  <link rel="preload" as="image" href="/assets/img/hero/hero-living-room-poster-1280.webp" imagesrcset="/assets/img/hero/hero-living-room-poster-1280.webp 1280w, /assets/img/hero/hero-living-room-poster-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
+  <title>Vastu Interior | Interior Designers in Ahmedabad, SG Highway</title>
+  <meta name="description" content="Vastu Interior is an interior designer in Ahmedabad for homes, offices and showrooms. Space planning, 3D design, modular kitchens and turnkey execution.">
   <link rel="canonical" href="https://www.vastuinterior.com/">
+  <link rel="preload" as="image" href="/assets/img/hero/hero-living-room-poster-1280.webp" imagesrcset="/assets/img/hero/hero-living-room-poster-1280.webp 1280w, /assets/img/hero/hero-living-room-poster-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <script src="/assets/js/components.js" defer></script>
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Interior Design Studio in Ahmedabad | Vastu Interior">
-  <meta property="og:description" content="Vastu Interior designs and builds homes, offices and showrooms in Ahmedabad, from space planning and 3D visualisation to turnkey execution and handover.">
+  <meta property="og:title" content="Vastu Interior | Interior Designers in Ahmedabad, SG Highway">
+  <meta property="og:description" content="Interior designer in Ahmedabad for homes, offices and showrooms. Space planning, 3D design, modular kitchens and turnkey execution from SG Highway.">
   <meta property="og:url" content="https://www.vastuinterior.com/">
   <meta property="og:image" content="https://www.vastuinterior.com/assets/img/brand/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta name="twitter:title" content="Interior Design Studio in Ahmedabad | Vastu Interior">
-  <meta name="twitter:description" content="Vastu Interior designs and builds homes, offices and showrooms in Ahmedabad, from space planning and 3D visualisation to turnkey execution and handover.">
+  <meta property="og:image:alt" content="Vastu Interior logo on a dark brown background">
+  <meta name="twitter:title" content="Vastu Interior | Interior Designers in Ahmedabad, SG Highway">
+  <meta name="twitter:description" content="Interior designer in Ahmedabad for homes, offices and showrooms. Space planning, 3D design, modular kitchens and turnkey execution from SG Highway.">
   <meta name="twitter:image" content="https://www.vastuinterior.com/assets/img/brand/og-image.jpg">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": "https://www.vastuinterior.com/#business",
-    "name": "Vastu Interior",
-    "description": "Interior design studio in Ahmedabad for homes, offices and showrooms.",
-    "url": "https://www.vastuinterior.com/",
-    "logo": "https://www.vastuinterior.com/assets/img/brand/logo.png",
-    "image": "https://www.vastuinterior.com/assets/img/brand/og-image.jpg",
-    "email": "vastuinterior10@gmail.com",
-    "telephone": "+91-63590-31530",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Office 305, Silver Oak Arcade, SG Highway, Bodakdev",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "postalCode": "380054",
-      "addressCountry": "IN"
-    },
-    "areaServed": { "@type": "City", "name": "Ahmedabad" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.vastuinterior.com/#organization",
+        "name": "Vastu Interior",
+        "url": "https://www.vastuinterior.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.vastuinterior.com/assets/img/brand/logo.png",
+          "width": 3128,
+          "height": 1964
+        },
+        "email": "vastuinterior10@gmail.com",
+        "telephone": "+91-63590-31530",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+91-63590-31530",
+          "email": "vastuinterior10@gmail.com",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi", "gu"]
+        }
+      },
+      {
+        "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+        "@id": "https://www.vastuinterior.com/#business",
+        "name": "Vastu Interior",
+        "description": "Interior design studio in Ahmedabad for homes, offices and showrooms: space planning, 3D visualisation, modular kitchens and wardrobes, technical drawings, estimation and turnkey execution.",
+        "url": "https://www.vastuinterior.com/",
+        "image": "https://www.vastuinterior.com/assets/img/brand/og-image.jpg",
+        "logo": "https://www.vastuinterior.com/assets/img/brand/logo.png",
+        "email": "vastuinterior10@gmail.com",
+        "telephone": "+91-63590-31530",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Office 305, Silver Oak Arcade, SG Highway, Bodakdev",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "postalCode": "380054",
+          "addressCountry": "IN"
+        },
+        "areaServed": { "@type": "City", "name": "Ahmedabad" },
+        "parentOrganization": { "@id": "https://www.vastuinterior.com/#organization" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.vastuinterior.com/#website",
+        "url": "https://www.vastuinterior.com/",
+        "name": "Vastu Interior",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://www.vastuinterior.com/#organization" }
+      }
+    ]
   }
   </script>
 </head>
@@ -145,20 +180,21 @@
   <!-- /partial:header -->
 
   <main id="main">
-    <!-- Hero: full-bleed media + 60% overlay, heading top-left, lead + text
-         button in a right column, facts row on the bottom edge.
-         Layout and reveal follow docs/REFERENCE-NOTES.md §3. -->
-    <section class="hero">
+    <!-- 01 Hero -------------------------------------------------------------
+         Stock footage from Pexels (credits in docs/image-credits.md), not a
+         Vastu Interior project. The poster <img> is the LCP image; main.js
+         fades the muted video in once it plays (never under reduced motion
+         or Data Saver). Entrance timing: animations.js initHero(). -->
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero__media">
-        <!-- Stock footage (Pexels, credits in docs/image-credits.md), not a Vastu Interior project.
-             The poster image is the LCP element; main.js fades the muted video in once it plays
-             and never starts it under reduced motion or data saver. -->
         <img src="/assets/img/hero/hero-living-room-poster-1280.webp"
              srcset="/assets/img/hero/hero-living-room-poster-1280.webp 1280w, /assets/img/hero/hero-living-room-poster-1920.webp 1920w"
              sizes="100vw" width="1920" height="1080"
              alt="Living room with walnut wall panelling, a cream sofa and a low wooden table"
              fetchpriority="high" decoding="async">
-        <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-hero-video>
+        <video class="hero__video" muted loop playsinline preload="metadata"
+               poster="/assets/img/hero/hero-living-room-poster-1280.webp"
+               aria-hidden="true" tabindex="-1" data-hero-video>
           <source src="/assets/video/hero-living-room-1280x720.webm" type="video/webm" media="(max-width: 1279px)">
           <source src="/assets/video/hero-living-room-1280x720.mp4" type="video/mp4" media="(max-width: 1279px)">
           <source src="/assets/video/hero-living-room-1920x1080.webm" type="video/webm">
@@ -166,266 +202,460 @@
         </video>
       </div>
       <div class="hero__inner">
-        <h1 class="hero__title" data-hero="title">Interiors that feel calm, considered and completely yours</h1>
+        <h1 class="hero__title" id="hero-title" data-hero="title">Your interior designer in Ahmedabad, from first sketch to handover</h1>
         <div class="hero__side">
-          <p class="hero__lead" data-hero="lead">We plan, visualise and build homes, offices and showrooms across Ahmedabad, so you see every room in 3D before a single wall is touched.</p>
-          <a class="link-line" href="/get-quote" data-hero="cta">Get a free quote</a>
+          <p class="hero__lead" data-hero="lead">We plan, visualise and build homes, offices and showrooms across Ahmedabad. You approve every room in 3D before work starts, and one team sees it through to the keys.</p>
+          <div class="hero__ctas" data-hero="cta">
+            <a class="btn btn--light" href="/get-quote">
+              <span class="btn__label"><span class="btn__text" data-label="Get Free Quote">Get Free Quote</span></span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="link-line" href="https://wa.me/916359031530?text=Hi%20Vastu%20Interior%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener">WhatsApp us</a>
+          </div>
         </div>
         <dl class="hero__facts">
-          <div><dt>Studio</dt><dd>Vastu Interior, Ahmedabad</dd></div>
-          <div><dt>Office</dt><dd>SG Highway, Bodakdev</dd></div>
-          <div><dt>Work</dt><dd>Residential &amp; commercial</dd></div>
-          <div><dt>Scope</dt><dd>Design to handover</dd></div>
+          <div><dt>Studio</dt><dd>SG Highway, Bodakdev</dd></div>
+          <div><dt>We design</dt><dd>Homes, offices &amp; showrooms</dd></div>
+          <div><dt>Approach</dt><dd>Every room in 3D first</dd></div>
+          <div><dt>Delivery</dt><dd>Design to handover</dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- Marquee -->
-    <div class="marquee" aria-label="Our services">
+    <!-- 02 Counters ----------------------------------------------------------
+         Facts about how the studio works, not invented track-record numbers.
+         TODO(client): add real figures (years in practice, projects
+         delivered) once confirmed, then swap one or two of these. -->
+    <section class="section section--tight" aria-label="Vastu Interior in numbers">
+      <div class="container">
+        <div class="stats" data-reveal="stagger">
+          <div class="stat">
+            <span class="stat__value" data-count="8">8</span>
+            <span class="stat__label">Services under one roof, from planning to execution</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" data-count="6">6</span>
+            <span class="stat__label">Clear steps between your first call and handover</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" data-count="100" data-suffix="%">100%</span>
+            <span class="stat__label">Of rooms shown to you in 3D before work begins</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value" data-count="1">1</span>
+            <span class="stat__label">Point of contact for your whole project</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 About preview ----------------------------------------------------- -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="container about-preview">
+        <div class="about-preview__text">
+          <p class="eyebrow"><span class="eyebrow__num">02</span> About the studio</p>
+          <h2 class="statement" id="about-title" data-split>We design around the way you live, then we stay on site until it is built that way.</h2>
+          <div class="about-preview__body" data-reveal="fade-up">
+            <p>Vastu Interior is an interior design studio on SG Highway in Bodakdev. We work on apartments, bungalows, offices and showrooms across Ahmedabad, and we plan for the city as it is: strong western sun, long dusty summers, joint families and rooms that have to do more than one job.</p>
+            <p>Every project starts with listening and measuring, moves through drawings and 3D views you can change, and ends with our own team on site. One studio, one estimate, one person to call.</p>
+            <a class="link-line" href="/about">More about the studio</a>
+          </div>
+        </div>
+        <div class="about-preview__media">
+          <div class="media media--portrait" data-reveal="mask">
+            <img src="/assets/img/about/traditional-indian-home-interior-768.webp"
+                 srcset="/assets/img/about/traditional-indian-home-interior-480.webp 480w, /assets/img/about/traditional-indian-home-interior-768.webp 768w, /assets/img/about/traditional-indian-home-interior-1280.webp 1280w"
+                 sizes="(min-width: 1200px) 30vw, (min-width: 768px) 45vw, 92vw" width="1920" height="1280"
+                 alt="Traditional Indian home interior with a marble floor, carved wooden doors and lit candles"
+                 loading="lazy" decoding="async">
+          </div>
+          <div class="media media--landscape about-preview__inset" data-reveal="mask" data-delay="0.15">
+            <img src="/assets/img/about/interior-finish-samples-ahmedabad-768.webp"
+                 srcset="/assets/img/about/interior-finish-samples-ahmedabad-480.webp 480w, /assets/img/about/interior-finish-samples-ahmedabad-768.webp 768w"
+                 sizes="(min-width: 1200px) 20vw, (min-width: 768px) 30vw, 60vw" width="1920" height="1280"
+                 alt="Fan of laminate and veneer finish samples on a white desk"
+                 loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Services: numbered rows, image preview follows the cursor on
+         fine pointers (components.js initServicePreview). -->
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="flow">
+            <p class="eyebrow"><span class="eyebrow__num">03</span> Services</p>
+            <h2 id="services-title" data-split>Eight services, one team</h2>
+          </div>
+          <p class="text-muted" data-reveal="fade-up">Take one service on its own, or let us run the whole project from the first measured drawing to the final clean.</p>
+        </div>
+        <ol class="service-list" role="list" data-service-preview data-reveal="stagger">
+          <li class="service-row" data-preview="/assets/img/services/residential-interior-design/residential-living-room-ahmedabad-768.webp">
+            <a class="service-row__link" href="/services/residential-interior-design/">
+              <span class="service-row__num">01</span>
+              <span class="service-row__title">Residential interior design</span>
+              <span class="service-row__desc">Apartments, villas and bungalows planned room by room, from furniture layout to lighting.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/commercial-interior-design/office-cabin-interior-design-768.webp">
+            <a class="service-row__link" href="/services/commercial-interior-design/">
+              <span class="service-row__num">02</span>
+              <span class="service-row__title">Commercial interior design</span>
+              <span class="service-row__desc">Offices, clinics and restaurants planned around how your people and customers move.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/modular-interior-solutions/modular-kitchen-ahmedabad-768.webp">
+            <a class="service-row__link" href="/services/modular-interior-solutions/">
+              <span class="service-row__num">03</span>
+              <span class="service-row__title">Modular kitchens &amp; wardrobes</span>
+              <span class="service-row__desc">Kitchens, wardrobes and storage built to your measurements, in finishes that cope with daily use.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/3d-visualization-rendering/3d-render-dining-room-768.webp">
+            <a class="service-row__link" href="/services/3d-visualization-rendering/">
+              <span class="service-row__num">04</span>
+              <span class="service-row__title">3D visualisation &amp; rendering</span>
+              <span class="service-row__desc">Photo-real views of every room, so you can change a colour or a cabinet before anything is ordered.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/architectural-technical-drawings/floor-plan-drawing-ahmedabad-768.webp">
+            <a class="service-row__link" href="/services/architectural-technical-drawings/">
+              <span class="service-row__num">05</span>
+              <span class="service-row__title">Architectural &amp; technical drawings</span>
+              <span class="service-row__desc">Measured plans, elevations and electrical and ceiling layouts your site team can build from.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/turnkey-interior-execution/turnkey-joinery-workshop-768.webp">
+            <a class="service-row__link" href="/services/turnkey-interior-execution/">
+              <span class="service-row__num">06</span>
+              <span class="service-row__title">Turnkey interior execution</span>
+              <span class="service-row__desc">Civil changes, carpentry, electrical, painting and finishing, handled by one team on one schedule.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/interior-estimation-project-management/veneer-laminate-sample-book-768.webp">
+            <a class="service-row__link" href="/services/interior-estimation-project-management/">
+              <span class="service-row__num">07</span>
+              <span class="service-row__title">Estimation &amp; project management</span>
+              <span class="service-row__desc">An itemised estimate before work starts, then site visits and updates until the last snag is closed.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li class="service-row" data-preview="/assets/img/services/space-planning-design-consultation/interior-mood-board-ahmedabad-768.webp">
+            <a class="service-row__link" href="/services/space-planning-design-consultation/">
+              <span class="service-row__num">08</span>
+              <span class="service-row__title">Space planning &amp; consultation</span>
+              <span class="service-row__desc">A second opinion, a furniture layout or a full room-by-room plan, before you spend on anything else.</span>
+              <svg class="service-row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 Featured projects ---------------------------------------------------
+         SAMPLE PROJECTS: design concepts illustrated with stock photography
+         (Pexels, see docs/image-credits.md). These are NOT completed Vastu
+         Interior projects and must not be presented as real client work.
+         Replace with real projects and photos when available. -->
+    <section class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="flow">
+            <p class="eyebrow"><span class="eyebrow__num">04</span> Projects</p>
+            <h2 id="projects-title" data-split>The kind of spaces we design</h2>
+          </div>
+          <p class="text-muted" data-reveal="fade-up">Sample concepts that show our approach to homes, offices and showrooms. Photographs are illustrative.</p>
+        </div>
+        <div class="project-list">
+          <article class="project-row" data-cursor="View" data-reveal="fade-up">
+            <div class="media media--project">
+              <img src="/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp"
+                   srcset="/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-480.webp 480w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp 768w, /assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-1280.webp 1280w"
+                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1097"
+                   alt="Living room with a boucle sofa, slatted oak TV wall and floating shelves"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="project-row__body">
+              <ul class="tag-list" role="list"><li class="tag">Residential</li><li class="tag">Sample concept</li></ul>
+              <h3 class="project-row__title"><a href="/projects/modern-3bhk-sg-highway/">Modern 3BHK, SG Highway</a></h3>
+              <p class="text-muted">Oak slats, warm white walls and built-in storage for a family apartment that needs to stay calm and easy to clean.</p>
+            </div>
+          </article>
+          <article class="project-row" data-cursor="View" data-reveal="fade-up">
+            <div class="media media--project">
+              <img src="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp"
+                   srcset="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-480.webp 480w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp 768w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-1280.webp 1280w"
+                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1080"
+                   alt="Double-height living room with a white sofa, slatted wood wall and garden courtyard"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="project-row__body">
+              <ul class="tag-list" role="list"><li class="tag">Residential</li><li class="tag">Sample concept</li></ul>
+              <h3 class="project-row__title"><a href="/projects/luxury-bungalow-bodakdev/">Bungalow, Bodakdev</a></h3>
+              <p class="text-muted">A double-height living room opened to the garden, with timber, stone and deep shade where the afternoon sun comes in.</p>
+            </div>
+          </article>
+          <article class="project-row" data-cursor="View" data-reveal="fade-up">
+            <div class="media media--project">
+              <img src="/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp"
+                   srcset="/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-480.webp 480w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp 768w, /assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-1280.webp 1280w"
+                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1280"
+                   alt="Glass-walled conference room with an oak table and wood-backed chairs"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="project-row__body">
+              <ul class="tag-list" role="list"><li class="tag">Commercial</li><li class="tag">Sample concept</li></ul>
+              <h3 class="project-row__title"><a href="/projects/corporate-office-ahmedabad/">Corporate office, Ahmedabad</a></h3>
+              <p class="text-muted">Glass meeting rooms, acoustic panels and oak worktops for a team that splits its week between focus work and clients.</p>
+            </div>
+          </article>
+          <article class="project-row" data-cursor="View" data-reveal="fade-up">
+            <div class="media media--project">
+              <img src="/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp"
+                   srcset="/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-480.webp 480w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp 768w, /assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-1280.webp 1280w"
+                   sizes="(min-width: 1200px) 34vw, (min-width: 768px) 50vw, 92vw" width="1920" height="1280"
+                   alt="Kitchen with an oak island table, bar stools and white tall units"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="project-row__body">
+              <ul class="tag-list" role="list"><li class="tag">Modular</li><li class="tag">Sample concept</li></ul>
+              <h3 class="project-row__title"><a href="/projects/modular-kitchen-wardrobe/">Modular kitchen &amp; wardrobes</a></h3>
+              <p class="text-muted">An island that doubles as the breakfast table, tall units for a busy pantry and wardrobes planned shelf by shelf.</p>
+            </div>
+          </article>
+        </div>
+        <a class="link-line section-link" href="/projects/">See all projects</a>
+      </div>
+    </section>
+
+    <!-- 06 Process: horizontal timeline pinned on large screens with motion
+         (animations.js initProcess); a plain vertical list everywhere else. -->
+    <section class="section process section--paper" aria-labelledby="process-title" data-process>
+      <div class="container process__inner">
+        <div class="section-head">
+          <div class="flow">
+            <p class="eyebrow"><span class="eyebrow__num">05</span> Process</p>
+            <h2 id="process-title" data-split>Six steps from first visit to handover</h2>
+          </div>
+          <p class="text-muted" data-reveal="fade-up">You always know what happens next, what it costs and what we need from you.</p>
+        </div>
+        <div class="process__timeline">
+          <div class="process__rail" aria-hidden="true"><span class="process__fill"></span></div>
+          <ol class="process__steps" role="list">
+            <li class="process__step">
+              <span class="process__num">01</span>
+              <h3 class="process__title">Consultation</h3>
+              <p>We visit, measure and listen: who lives or works here, what is not working today and what the budget allows.</p>
+            </li>
+            <li class="process__step">
+              <span class="process__num">02</span>
+              <h3 class="process__title">Space planning</h3>
+              <p>Furniture layouts and circulation, drawn to scale, so every room has a clear purpose before style comes in.</p>
+            </li>
+            <li class="process__step">
+              <span class="process__num">03</span>
+              <h3 class="process__title">3D design</h3>
+              <p>Photo-real views of each room with real materials. You change what you want until it feels right.</p>
+            </li>
+            <li class="process__step">
+              <span class="process__num">04</span>
+              <h3 class="process__title">Estimation</h3>
+              <p>An itemised estimate tied to the approved design, so you know the cost of every cabinet and finish.</p>
+            </li>
+            <li class="process__step">
+              <span class="process__num">05</span>
+              <h3 class="process__title">Execution</h3>
+              <p>Our carpenters, electricians and painters work to the drawings, with regular site visits and updates.</p>
+            </li>
+            <li class="process__step">
+              <span class="process__num">06</span>
+              <h3 class="process__title">Handover</h3>
+              <p>A full walk-through, a snag list closed item by item, then a deep clean before we hand you the keys.</p>
+            </li>
+          </ol>
+        </div>
+        <a class="link-line section-link" href="/process">How each step works</a>
+      </div>
+    </section>
+
+    <!-- 07 Why choose us -------------------------------------------------------
+         Practices the studio describes; confirm wording with the client. -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container split why">
+        <div class="flow why__intro">
+          <p class="eyebrow"><span class="eyebrow__num">06</span> Why Vastu Interior</p>
+          <h2 id="why-title" data-split>Fewer surprises, from the first drawing to the last screw</h2>
+          <p class="text-muted" data-reveal="fade-up">Most interior projects go wrong in the gaps between designer, contractor and client. We close those gaps by keeping design, estimation and execution in one studio.</p>
+          <a class="link-line" href="/why-choose-us" data-reveal="fade-up">Why clients choose us</a>
+        </div>
+        <ol class="why-list" role="list" data-reveal="stagger">
+          <li class="why-item">
+            <span class="why-item__num">01</span>
+            <div><h3 class="why-item__title">You see it before you pay for it</h3><p class="text-muted">Every room in 3D, with the actual laminates, fabrics and lights, before a single order is placed.</p></div>
+          </li>
+          <li class="why-item">
+            <span class="why-item__num">02</span>
+            <div><h3 class="why-item__title">An estimate you can read</h3><p class="text-muted">Itemised by room and by material, so you can see where the money goes and choose where to save.</p></div>
+          </li>
+          <li class="why-item">
+            <span class="why-item__num">03</span>
+            <div><h3 class="why-item__title">One team, one point of contact</h3><p class="text-muted">The people who design your space also manage the site, so nothing gets lost between drawings and work.</p></div>
+          </li>
+          <li class="why-item">
+            <span class="why-item__num">04</span>
+            <div><h3 class="why-item__title">Designed for Ahmedabad</h3><p class="text-muted">Layouts, finishes and storage chosen for strong sun, dust, monsoon damp and how families here use their homes.</p></div>
+          </li>
+          <li class="why-item">
+            <span class="why-item__num">05</span>
+            <div><h3 class="why-item__title">Drawings a site can follow</h3><p class="text-muted">Measured plans and elevations for every trade, so what is built matches what you approved.</p></div>
+          </li>
+          <li class="why-item">
+            <span class="why-item__num">06</span>
+            <div><h3 class="why-item__title">Close to your site</h3><p class="text-muted">Our studio is on SG Highway in Bodakdev, a short drive from most of the city's new homes and offices.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 08 Marquee -->
+    <div class="marquee" aria-label="What we work on">
       <div class="marquee__track">
         <ul class="marquee__list" role="list">
-          <li class="marquee__item">Residential interiors</li>
-          <li class="marquee__item">Commercial interiors</li>
+          <li class="marquee__item">Residential</li>
+          <li class="marquee__item">Commercial</li>
           <li class="marquee__item">Modular kitchens</li>
           <li class="marquee__item">3D visualisation</li>
           <li class="marquee__item">Turnkey execution</li>
           <li class="marquee__item">Space planning</li>
+          <li class="marquee__item">Technical drawings</li>
+          <li class="marquee__item">Estimation</li>
         </ul>
         <ul class="marquee__list" role="list" aria-hidden="true">
-          <li class="marquee__item">Residential interiors</li>
-          <li class="marquee__item">Commercial interiors</li>
+          <li class="marquee__item">Residential</li>
+          <li class="marquee__item">Commercial</li>
           <li class="marquee__item">Modular kitchens</li>
           <li class="marquee__item">3D visualisation</li>
           <li class="marquee__item">Turnkey execution</li>
           <li class="marquee__item">Space planning</li>
+          <li class="marquee__item">Technical drawings</li>
+          <li class="marquee__item">Estimation</li>
         </ul>
       </div>
     </div>
 
-    <!-- Reveal types -->
-    <section class="section">
+    <!-- 09 Testimonials ---------------------------------------------------------
+         REPLACE WITH REAL TESTIMONIALS. The three quotes below are SAMPLE
+         placeholders written to show the layout. They are not from real
+         clients, are labelled "Sample" on the page, and must be replaced
+         with real, permission-given client quotes before launch.
+         Slider: components.js initSlider. -->
+    <section class="section" aria-labelledby="testimonials-title">
       <div class="container">
         <div class="section-head">
           <div class="flow">
-            <p class="eyebrow">Reveal types</p>
-            <h2 data-split>Design that starts with <em>how you live</em></h2>
-          </div>
-          <p class="text-muted" data-reveal="fade-up">Every block on this page uses a data attribute: fade-up, fade, mask and stagger. Scroll back up after a reload to see them again.</p>
-        </div>
-
-        <div class="split split--reverse">
-          <div class="media media--wide" data-reveal="mask">
-            <img src="/assets/img/hero/placeholder-landscape.webp" width="1200" height="750" alt="Placeholder for a modular kitchen photograph" loading="lazy" decoding="async" data-parallax="0.12">
-          </div>
-          <div class="flow">
-            <h3 data-reveal="fade-up">A home planned around daylight, storage and the way your family moves</h3>
-            <p class="text-muted" data-reveal="fade">Ahmedabad apartments get strong western sun and long, dusty summers. We plan layouts, finishes and storage around that, so rooms stay bright, cool and easy to keep clean.</p>
-            <ul class="tag-list" role="list" data-reveal="stagger">
-              <li class="tag">Space planning</li>
-              <li class="tag">Natural light</li>
-              <li class="tag">Storage</li>
-              <li class="tag tag--solid">3D first</li>
-            </ul>
-            <a class="link-arrow" href="/process">
-              See how we work
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            <p class="eyebrow"><span class="eyebrow__num">07</span> Testimonials</p>
+            <h2 id="testimonials-title" data-split>What working with us feels like</h2>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Counters -->
-    <section class="section section--paper">
-      <div class="container">
-        <!-- DEMO: the last two figures are placeholders. Confirm real numbers with the client before launch. -->
-        <div class="grid grid--4" data-reveal="stagger">
-          <div class="stat">
-            <span class="stat__value" data-count="8">8</span>
-            <span class="stat__label">Specialist services under one roof</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value" data-count="1">1</span>
-            <span class="stat__label">Team from first sketch to handover</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value" data-count="120" data-suffix="+">120+</span>
-            <span class="stat__label">Demo figure, to be confirmed</span>
-          </div>
-          <div class="stat">
-            <span class="stat__value" data-count="4.9" data-suffix="/5">4.9/5</span>
-            <span class="stat__label">Demo figure, to be confirmed</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cards -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div class="flow">
-            <p class="eyebrow">Cards</p>
-            <h2 data-split>Services and <em>projects</em></h2>
-          </div>
-        </div>
-        <div class="grid grid--3" data-reveal="stagger">
-          <article class="card">
-            <span class="card__num">01</span>
-            <h3 class="card__title"><a href="/services/residential-interior-design/">Residential interior design</a></h3>
-            <p class="card__text">Apartments, villas and bungalows designed room by room, from furniture layout to lighting and finishes.</p>
-            <span class="link-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </article>
-          <article class="card">
-            <span class="card__num">02</span>
-            <h3 class="card__title"><a href="/services/3d-visualization-rendering/">3D visualisation</a></h3>
-            <p class="card__text">Photo-real renders of every room, so you can change a colour or a cabinet before anything is ordered.</p>
-            <span class="link-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          </article>
-          <!-- SAMPLE PROJECT: not a real client project. -->
-          <article class="project-card" data-cursor="View">
-            <div class="media">
-              <img src="/assets/img/hero/placeholder-portrait.webp" width="800" height="1000" alt="Placeholder for a sample 3BHK living room" loading="lazy" decoding="async">
+        <div class="slider" data-slider aria-roledescription="carousel" aria-label="Client testimonials">
+          <div class="slider__viewport">
+            <div class="slider__track">
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                <div class="media slide__media">
+                  <img src="/assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-768.webp"
+                       srcset="/assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-480.webp 480w, /assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-768.webp 768w"
+                       sizes="(min-width: 1024px) 30vw, 92vw" width="1920" height="1280"
+                       alt="Minimal living room with a cream chaise sofa, grey rug and herringbone floor"
+                       loading="lazy" decoding="async">
+                </div>
+                <div class="slide__body">
+                  <span class="tag">Sample</span>
+                  <blockquote class="slide__quote"><p>“We could walk through our flat in 3D before anything was built, and we changed the kitchen layout twice. What we got is exactly what we saw.”</p></blockquote>
+                  <figcaption class="slide__cite"><strong>Sample client</strong><span>2BHK apartment, Gota</span></figcaption>
+                </div>
+              </figure>
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                <div class="media slide__media">
+                  <img src="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-768.webp"
+                       srcset="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-480.webp 480w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-768.webp 768w"
+                       sizes="(min-width: 1024px) 30vw, 92vw" width="1920" height="1282"
+                       alt="Dining area with an oak table and full-height windows onto a garden"
+                       loading="lazy" decoding="async">
+                </div>
+                <div class="slide__body">
+                  <span class="tag">Sample</span>
+                  <blockquote class="slide__quote"><p>“The estimate listed every item room by room, so we knew where to spend and where to save. The final bill matched it.”</p></blockquote>
+                  <figcaption class="slide__cite"><strong>Sample client</strong><span>Bungalow, Thaltej</span></figcaption>
+                </div>
+              </figure>
+              <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                <div class="media slide__media">
+                  <img src="/assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-768.webp"
+                       srcset="/assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-480.webp 480w, /assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-768.webp 768w"
+                       sizes="(min-width: 1024px) 30vw, 92vw" width="1920" height="1280"
+                       alt="Office reception counter in walnut laminate with planters"
+                       loading="lazy" decoding="async">
+                </div>
+                <div class="slide__body">
+                  <span class="tag">Sample</span>
+                  <blockquote class="slide__quote"><p>“They worked around our office hours and kept us posted every week. We moved in on the date they gave us.”</p></blockquote>
+                  <figcaption class="slide__cite"><strong>Sample client</strong><span>Office, Prahlad Nagar</span></figcaption>
+                </div>
+              </figure>
             </div>
-            <div class="project-card__meta">
-              <span class="tag">Residential</span>
-              <span class="tag">SG Highway</span>
+          </div>
+          <div class="slider__controls">
+            <p class="slider__count" aria-hidden="true"><span data-slider-current>01</span>/<span>03</span></p>
+            <div class="slider__progress" aria-hidden="true"><span data-slider-bar></span></div>
+            <div class="slider__buttons">
+              <button class="slider__btn" type="button" data-slider-prev aria-label="Previous testimonial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <button class="slider__btn" type="button" data-slider-next aria-label="Next testimonial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
             </div>
-            <h3 class="project-card__title"><a href="/projects/modern-3bhk-sg-highway/">Modern 3BHK, SG Highway (sample)</a></h3>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Buttons on dark -->
-    <section class="section section--dark">
-      <div class="container flow">
-        <p class="eyebrow">Buttons</p>
-        <h2 data-split>Every button, <em>one system</em></h2>
-        <div class="btn-group">
-          <a class="btn btn--light" href="/get-quote"><span class="btn__label"><span class="btn__text" data-label="Light">Light</span></span></a>
-          <a class="btn btn--outline" href="/contact"><span class="btn__label"><span class="btn__text" data-label="Outline on dark">Outline on dark</span></span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Buttons on light + breadcrumbs -->
-    <section class="section">
-      <div class="container flow">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <ol>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><span aria-current="page">Residential interior design</span></li>
-          </ol>
-        </nav>
-        <div class="btn-group">
-          <a class="btn btn--primary" href="/get-quote">
-            <span class="btn__label"><span class="btn__text" data-label="Primary">Primary</span></span>
-            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a class="btn btn--outline" href="/contact"><span class="btn__label"><span class="btn__text" data-label="Outline">Outline</span></span></a>
-          <a class="btn btn--primary btn--sm" href="/contact"><span class="btn__label"><span class="btn__text" data-label="Small">Small</span></span></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Accordion -->
-    <section class="section section--paper">
-      <div class="container container--narrow">
-        <div class="flow text-center">
-          <p class="eyebrow">Accordion</p>
-          <h2 data-split>Questions we hear <em>often</em></h2>
-        </div>
-        <div class="accordion" style="margin-top: var(--s-6)">
-          <details class="accordion__item" name="faq" open>
-            <summary class="accordion__trigger">How long does a 3BHK interior take in Ahmedabad?<span class="accordion__icon" aria-hidden="true"></span></summary>
-            <div class="accordion__panel"><p>Design and 3D approval usually take three to four weeks. Site work for a full 3BHK, including modular furniture, typically runs ten to fourteen weeks depending on civil changes and material lead times.</p></div>
-          </details>
-          <details class="accordion__item" name="faq">
-            <summary class="accordion__trigger">Do I see the design before work starts?<span class="accordion__icon" aria-hidden="true"></span></summary>
-            <div class="accordion__panel"><p>Yes. You get a furniture layout, 3D views of each room and a material board. Work on site starts only after you sign off on all three.</p></div>
-          </details>
-          <details class="accordion__item" name="faq">
-            <summary class="accordion__trigger">Can you work with my existing furniture?<span class="accordion__icon" aria-hidden="true"></span></summary>
-            <div class="accordion__panel"><p>Often, yes. We measure what you want to keep and plan the new pieces, colours and lighting around it.</p></div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Form styles (not wired up yet: forms.js arrives with the contact phase) -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="flow" style="margin-bottom: var(--s-6)">
-          <p class="eyebrow">Form styles</p>
-          <h2 data-split>Tell us about <em>your space</em></h2>
-        </div>
-        <form class="form" action="#" method="post" data-reveal="fade-up">
-          <div class="field">
-            <label class="field__label" for="demo-name">Name <span class="req" aria-hidden="true">*</span></label>
-            <input class="field__input" id="demo-name" name="name" type="text" autocomplete="name" required placeholder="Your full name">
+            <p class="visually-hidden" aria-live="polite" data-slider-status></p>
           </div>
-          <div class="field is-invalid">
-            <label class="field__label" for="demo-phone">Phone <span class="req" aria-hidden="true">*</span></label>
-            <input class="field__input" id="demo-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+91" aria-describedby="demo-phone-error" aria-invalid="true">
-            <span class="field__error" id="demo-phone-error">Please enter a 10-digit mobile number.</span>
-          </div>
-          <div class="field">
-            <label class="field__label" for="demo-email">Email</label>
-            <input class="field__input" id="demo-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
-          </div>
-          <div class="field">
-            <label class="field__label" for="demo-service">Service</label>
-            <select class="field__input" id="demo-service" name="service">
-              <option value="">Choose a service</option>
-              <option>Residential interior design</option>
-              <option>Commercial interior design</option>
-              <option>Modular kitchen and wardrobes</option>
-              <option>Turnkey execution</option>
-            </select>
-          </div>
-          <fieldset class="choices field--full">
-            <legend class="field__label">Property type</legend>
-            <label class="choice"><input type="radio" name="property" value="2bhk"><span>2BHK</span></label>
-            <label class="choice"><input type="radio" name="property" value="3bhk" checked><span>3BHK</span></label>
-            <label class="choice"><input type="radio" name="property" value="bungalow"><span>Bungalow</span></label>
-            <label class="choice"><input type="radio" name="property" value="office"><span>Office</span></label>
-          </fieldset>
-          <div class="field field--full">
-            <label class="field__label" for="demo-message">About your project</label>
-            <textarea class="field__input" id="demo-message" name="message" rows="4" placeholder="Area, location, timeline, anything we should know"></textarea>
-            <span class="field__hint">Rough details are fine. We will call to understand the rest.</span>
-          </div>
-          <div class="form__footer">
-            <label class="check"><input type="checkbox" name="consent" required><span>I agree to be contacted about my enquiry and accept the <a href="/privacy-policy">privacy policy</a>.</span></label>
-            <button class="btn btn--primary" type="submit"><span class="btn__label"><span class="btn__text" data-label="Send enquiry">Send enquiry</span></span></button>
-          </div>
-          <p class="form-status form-status--success" role="status">Example success message: thank you, we will call you within one working day.</p>
-          <p class="form-status form-status--error">Example error message: something went wrong. Please call or WhatsApp us instead.</p>
-        </form>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- 10 CTA banner + footer: partials/footer.html -->
   <!-- partial:footer -->
   <footer class="site-footer section--dark">
-    <div class="container">
-      <div class="footer-cta">
-        <div class="flow">
-          <p class="eyebrow">Start a project</p>
-          <h2 class="footer-cta__title">Let’s design a space that feels <em>unmistakably yours.</em></h2>
-        </div>
-        <div class="footer-cta__actions">
+    <!-- CTA banner: edge-to-edge image band with an overlay card (reference §4).
+         Stock photo from Pexels (docs/image-credits.md), illustrative only. -->
+    <div class="footer-band">
+      <img class="footer-band__img"
+           src="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-1280.webp"
+           srcset="/assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-768.webp 768w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-1280.webp 1280w, /assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-1920.webp 1920w"
+           sizes="100vw" width="1920" height="1440"
+           alt="Living room seen through a wide arch, with timber beams and a terracotta floor"
+           loading="lazy" decoding="async">
+      <div class="footer-band__card">
+        <p class="eyebrow">Start a project</p>
+        <h2 class="footer-band__title">Let’s design a space that feels unmistakably yours</h2>
+        <p>Tell us about your home, office or showroom. We will visit, measure and send you a clear, itemised proposal.</p>
+        <div class="footer-band__actions">
           <a class="btn btn--light" href="/get-quote">
-            <span class="btn__label"><span class="btn__text" data-label="Get a free quote">Get a free quote</span></span>
+            <span class="btn__label"><span class="btn__text" data-label="Get Free Quote">Get Free Quote</span></span>
           </a>
-          <a class="btn btn--outline" href="https://wa.me/916359031530" target="_blank" rel="noopener">
-            <span class="btn__label"><span class="btn__text" data-label="WhatsApp us">WhatsApp us</span></span>
-          </a>
+          <a class="link-line" href="https://wa.me/916359031530?text=Hi%20Vastu%20Interior%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank" rel="noopener">WhatsApp us</a>
         </div>
       </div>
+    </div>
 
+    <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img class="logo" src="/assets/img/brand/logo-light.webp" width="480" height="301" alt="Vastu Interior" loading="lazy" decoding="async">
