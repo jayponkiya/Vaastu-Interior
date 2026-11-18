@@ -1,0 +1,2179 @@
+{
+  "generated": "2026-11-18",
+  "widths": [
+    480,
+    768,
+    1280,
+    1920
+  ],
+  "images": [
+    {
+      "folder": "about",
+      "name": "interior-finish-samples-ahmedabad",
+      "alt": "Fan of laminate and veneer finish samples on a white desk",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/about/interior-finish-samples-ahmedabad-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 7518
+        },
+        {
+          "file": "/assets/img/about/interior-finish-samples-ahmedabad-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 12658
+        },
+        {
+          "file": "/assets/img/about/interior-finish-samples-ahmedabad-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 21420
+        },
+        {
+          "file": "/assets/img/about/interior-finish-samples-ahmedabad-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 40406
+        }
+      ]
+    },
+    {
+      "folder": "about",
+      "name": "traditional-indian-home-interior",
+      "alt": "Traditional Indian home interior with a marble floor, carved wooden doors and lit candles",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/about/traditional-indian-home-interior-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18158
+        },
+        {
+          "file": "/assets/img/about/traditional-indian-home-interior-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 35884
+        },
+        {
+          "file": "/assets/img/about/traditional-indian-home-interior-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 63960
+        },
+        {
+          "file": "/assets/img/about/traditional-indian-home-interior-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 109924
+        }
+      ]
+    },
+    {
+      "folder": "services/residential-interior-design",
+      "name": "residential-living-room-ahmedabad",
+      "alt": "Indian apartment living room with a beige sectional sofa, slatted wooden TV wall and soft rug",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/residential-interior-design/residential-living-room-ahmedabad-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 15658
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/residential-living-room-ahmedabad-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 34914
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/residential-living-room-ahmedabad-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 72846
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/residential-living-room-ahmedabad-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 149968
+        }
+      ]
+    },
+    {
+      "folder": "services/residential-interior-design",
+      "name": "luxury-living-room-interior",
+      "alt": "Formal living room with a cream sofa, carved wooden cabinets and a patterned rug",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/residential-interior-design/luxury-living-room-interior-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 36140
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/luxury-living-room-interior-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 81818
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/luxury-living-room-interior-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 173436
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/luxury-living-room-interior-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 320460
+        }
+      ]
+    },
+    {
+      "folder": "services/residential-interior-design",
+      "name": "living-room-wooden-ceiling",
+      "alt": "Living room with a timber ceiling, canopy armchairs and a bright patterned sofa",
+      "width": 1920,
+      "height": 1342,
+      "sizes": [
+        {
+          "file": "/assets/img/services/residential-interior-design/living-room-wooden-ceiling-480.webp",
+          "width": 480,
+          "height": 335,
+          "bytes": 28178
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/living-room-wooden-ceiling-768.webp",
+          "width": 768,
+          "height": 536,
+          "bytes": 65824
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/living-room-wooden-ceiling-1280.webp",
+          "width": 1280,
+          "height": 894,
+          "bytes": 140562
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/living-room-wooden-ceiling-1920.webp",
+          "width": 1920,
+          "height": 1342,
+          "bytes": 285622
+        }
+      ]
+    },
+    {
+      "folder": "services/residential-interior-design",
+      "name": "living-dining-area-wooden-furniture",
+      "alt": "Family living and dining area with wooden furniture beside a timber staircase",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/residential-interior-design/living-dining-area-wooden-furniture-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 30584
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/living-dining-area-wooden-furniture-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 64636
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/living-dining-area-wooden-furniture-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 122676
+        },
+        {
+          "file": "/assets/img/services/residential-interior-design/living-dining-area-wooden-furniture-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 215818
+        }
+      ]
+    },
+    {
+      "folder": "services/commercial-interior-design",
+      "name": "office-cabin-interior-design",
+      "alt": "Wood-panelled office cabin with leather chairs, a timber desk and backlit shelving",
+      "width": 1920,
+      "height": 1371,
+      "sizes": [
+        {
+          "file": "/assets/img/services/commercial-interior-design/office-cabin-interior-design-480.webp",
+          "width": 480,
+          "height": 342,
+          "bytes": 28554
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/office-cabin-interior-design-768.webp",
+          "width": 768,
+          "height": 548,
+          "bytes": 63242
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/office-cabin-interior-design-1280.webp",
+          "width": 1280,
+          "height": 914,
+          "bytes": 127086
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/office-cabin-interior-design-1920.webp",
+          "width": 1920,
+          "height": 1371,
+          "bytes": 237862
+        }
+      ]
+    },
+    {
+      "folder": "services/commercial-interior-design",
+      "name": "wood-clad-office-corridor",
+      "alt": "Office corridor clad in pine planks with glass cabin doors",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/commercial-interior-design/wood-clad-office-corridor-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18016
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/wood-clad-office-corridor-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 35912
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/wood-clad-office-corridor-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 89572
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/wood-clad-office-corridor-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 194704
+        }
+      ]
+    },
+    {
+      "folder": "services/commercial-interior-design",
+      "name": "conference-room-oak-table",
+      "alt": "Meeting room with a long oak table and green upholstered chairs",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/commercial-interior-design/conference-room-oak-table-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 11620
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/conference-room-oak-table-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 23682
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/conference-room-oak-table-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 47074
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/conference-room-oak-table-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 93560
+        }
+      ]
+    },
+    {
+      "folder": "services/commercial-interior-design",
+      "name": "meeting-room-wood-slat-wall",
+      "alt": "Small meeting room with a vertical wood slat wall and pendant lights",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/commercial-interior-design/meeting-room-wood-slat-wall-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19040
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/meeting-room-wood-slat-wall-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 48424
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/meeting-room-wood-slat-wall-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 132744
+        },
+        {
+          "file": "/assets/img/services/commercial-interior-design/meeting-room-wood-slat-wall-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 324150
+        }
+      ]
+    },
+    {
+      "folder": "services/modular-interior-solutions",
+      "name": "modular-kitchen-ahmedabad",
+      "alt": "Modular kitchen with mahogany-finish cabinets, a central island and stone counters",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-ahmedabad-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17116
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-ahmedabad-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 36716
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-ahmedabad-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 72828
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-ahmedabad-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 146488
+        }
+      ]
+    },
+    {
+      "folder": "services/modular-interior-solutions",
+      "name": "modular-kitchen-wood-backsplash",
+      "alt": "Kitchen counter with a wood-grain backsplash, under-cabinet lighting and white drawers",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-wood-backsplash-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 9896
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-wood-backsplash-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 22420
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-wood-backsplash-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 48504
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-wood-backsplash-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 105378
+        }
+      ]
+    },
+    {
+      "folder": "services/modular-interior-solutions",
+      "name": "modular-wardrobe-oak-interior",
+      "alt": "Open wardrobe unit in light oak with hanging rails, shelves and glass-front drawers",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-wardrobe-oak-interior-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 9390
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-wardrobe-oak-interior-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 17726
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-wardrobe-oak-interior-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 30808
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-wardrobe-oak-interior-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 56626
+        }
+      ]
+    },
+    {
+      "folder": "services/modular-interior-solutions",
+      "name": "modular-kitchen-brick-wall",
+      "alt": "Long modular kitchen with honey-wood cabinets, an exposed brick wall and a breakfast bar",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-brick-wall-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 26150
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-brick-wall-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 54472
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-brick-wall-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 99658
+        },
+        {
+          "file": "/assets/img/services/modular-interior-solutions/modular-kitchen-brick-wall-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 176724
+        }
+      ]
+    },
+    {
+      "folder": "services/3d-visualization-rendering",
+      "name": "3d-render-dining-room",
+      "alt": "3D render of a dining room with an oak table, an arched window and indoor plants",
+      "width": 1920,
+      "height": 1080,
+      "sizes": [
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-dining-room-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 10780
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-dining-room-768.webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 22432
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-dining-room-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 42184
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-dining-room-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 73818
+        }
+      ]
+    },
+    {
+      "folder": "services/3d-visualization-rendering",
+      "name": "3d-render-living-room",
+      "alt": "3D render of a living room with a tan sofa and floor-to-ceiling glazing",
+      "width": 1920,
+      "height": 1092,
+      "sizes": [
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-living-room-480.webp",
+          "width": 480,
+          "height": 273,
+          "bytes": 11312
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-living-room-768.webp",
+          "width": 768,
+          "height": 436,
+          "bytes": 23584
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-living-room-1280.webp",
+          "width": 1280,
+          "height": 728,
+          "bytes": 47558
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-living-room-1920.webp",
+          "width": 1920,
+          "height": 1092,
+          "bytes": 88404
+        }
+      ]
+    },
+    {
+      "folder": "services/3d-visualization-rendering",
+      "name": "3d-render-arched-hall",
+      "alt": "3D render of a terracotta-floored hall with arched openings",
+      "width": 1920,
+      "height": 1080,
+      "sizes": [
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-arched-hall-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 10610
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-arched-hall-768.webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 23382
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-arched-hall-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 47894
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-arched-hall-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 93840
+        }
+      ]
+    },
+    {
+      "folder": "services/3d-visualization-rendering",
+      "name": "3d-render-bedroom-lighting",
+      "alt": "3D render of a bedroom corner lit by a warm bedside lamp",
+      "width": 1920,
+      "height": 1080,
+      "sizes": [
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-bedroom-lighting-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 9172
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-bedroom-lighting-768.webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 25324
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-bedroom-lighting-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 67340
+        },
+        {
+          "file": "/assets/img/services/3d-visualization-rendering/3d-render-bedroom-lighting-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 142156
+        }
+      ]
+    },
+    {
+      "folder": "services/architectural-technical-drawings",
+      "name": "floor-plan-drawing-ahmedabad",
+      "alt": "Printed floor plan on a wooden desk with a pencil and measuring tape",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/floor-plan-drawing-ahmedabad-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 11318
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/floor-plan-drawing-ahmedabad-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 21960
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/floor-plan-drawing-ahmedabad-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 38990
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/floor-plan-drawing-ahmedabad-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 65664
+        }
+      ]
+    },
+    {
+      "folder": "services/architectural-technical-drawings",
+      "name": "architectural-plan-dimensions",
+      "alt": "Drafting compass on a dimensioned architectural plan",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/architectural-plan-dimensions-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 9542
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/architectural-plan-dimensions-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 16926
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/architectural-plan-dimensions-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 27824
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/architectural-plan-dimensions-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 48646
+        }
+      ]
+    },
+    {
+      "folder": "services/architectural-technical-drawings",
+      "name": "drafting-tools-drawings",
+      "alt": "Drafting tools, a scale ruler and rolled drawings on a wooden table",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/drafting-tools-drawings-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16758
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/drafting-tools-drawings-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 37050
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/drafting-tools-drawings-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 76590
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/drafting-tools-drawings-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 151214
+        }
+      ]
+    },
+    {
+      "folder": "services/architectural-technical-drawings",
+      "name": "kitchen-bathroom-layout-plan",
+      "alt": "Detail of a kitchen and bathroom layout plan with dimensions",
+      "width": 1920,
+      "height": 1272,
+      "sizes": [
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/kitchen-bathroom-layout-plan-480.webp",
+          "width": 480,
+          "height": 318,
+          "bytes": 14562
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/kitchen-bathroom-layout-plan-768.webp",
+          "width": 768,
+          "height": 509,
+          "bytes": 26586
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/kitchen-bathroom-layout-plan-1280.webp",
+          "width": 1280,
+          "height": 848,
+          "bytes": 47694
+        },
+        {
+          "file": "/assets/img/services/architectural-technical-drawings/kitchen-bathroom-layout-plan-1920.webp",
+          "width": 1920,
+          "height": 1272,
+          "bytes": 87050
+        }
+      ]
+    },
+    {
+      "folder": "services/turnkey-interior-execution",
+      "name": "turnkey-joinery-workshop",
+      "alt": "Joinery workshop with a timber workbench, chisels and stacked wood planks",
+      "width": 1920,
+      "height": 1128,
+      "sizes": [
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/turnkey-joinery-workshop-480.webp",
+          "width": 480,
+          "height": 282,
+          "bytes": 14136
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/turnkey-joinery-workshop-768.webp",
+          "width": 768,
+          "height": 451,
+          "bytes": 25802
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/turnkey-joinery-workshop-1280.webp",
+          "width": 1280,
+          "height": 752,
+          "bytes": 40328
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/turnkey-joinery-workshop-1920.webp",
+          "width": 1920,
+          "height": 1128,
+          "bytes": 65600
+        }
+      ]
+    },
+    {
+      "folder": "services/turnkey-interior-execution",
+      "name": "carpentry-bench-measuring",
+      "alt": "Measuring tape, steel rule and wood shavings on a carpentry bench",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpentry-bench-measuring-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17286
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpentry-bench-measuring-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 33196
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpentry-bench-measuring-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 58192
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpentry-bench-measuring-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 102480
+        }
+      ]
+    },
+    {
+      "folder": "services/turnkey-interior-execution",
+      "name": "carpenter-hand-saw-timber",
+      "alt": "Carpenter cutting a timber batten with a hand saw at a workbench",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpenter-hand-saw-timber-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18200
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpenter-hand-saw-timber-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 33356
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpenter-hand-saw-timber-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 56042
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/carpenter-hand-saw-timber-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 94598
+        }
+      ]
+    },
+    {
+      "folder": "services/turnkey-interior-execution",
+      "name": "interior-renovation-site",
+      "alt": "Home under renovation with exposed wall studs and doorways",
+      "width": 1920,
+      "height": 1440,
+      "sizes": [
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/interior-renovation-site-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 25442
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/interior-renovation-site-768.webp",
+          "width": 768,
+          "height": 576,
+          "bytes": 56884
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/interior-renovation-site-1280.webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 124904
+        },
+        {
+          "file": "/assets/img/services/turnkey-interior-execution/interior-renovation-site-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 270300
+        }
+      ]
+    },
+    {
+      "folder": "services/interior-estimation-project-management",
+      "name": "veneer-laminate-sample-book",
+      "alt": "Wood veneer laminate sample book open on a table",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/veneer-laminate-sample-book-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12496
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/veneer-laminate-sample-book-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 25590
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/veneer-laminate-sample-book-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 47468
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/veneer-laminate-sample-book-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 85092
+        }
+      ]
+    },
+    {
+      "folder": "services/interior-estimation-project-management",
+      "name": "material-samples-flat-lay",
+      "alt": "Flat lay of wood, fabric and paint samples for an interior specification",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/material-samples-flat-lay-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17816
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/material-samples-flat-lay-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 39098
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/material-samples-flat-lay-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 75320
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/material-samples-flat-lay-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 134420
+        }
+      ]
+    },
+    {
+      "folder": "services/interior-estimation-project-management",
+      "name": "wood-finish-samples-shelf",
+      "alt": "Wood and finish samples lined up on white wall shelves",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/wood-finish-samples-shelf-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 11996
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/wood-finish-samples-shelf-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 26154
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/wood-finish-samples-shelf-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 54522
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/wood-finish-samples-shelf-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 111862
+        }
+      ]
+    },
+    {
+      "folder": "services/interior-estimation-project-management",
+      "name": "leather-upholstery-swatches",
+      "alt": "Leather upholstery swatches in tan, burgundy and brown",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/leather-upholstery-swatches-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19396
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/leather-upholstery-swatches-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 44980
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/leather-upholstery-swatches-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 101842
+        },
+        {
+          "file": "/assets/img/services/interior-estimation-project-management/leather-upholstery-swatches-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 198590
+        }
+      ]
+    },
+    {
+      "folder": "services/space-planning-design-consultation",
+      "name": "interior-mood-board-ahmedabad",
+      "alt": "Interior mood board with tiles, fabrics, paint cards and drawing tools",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/interior-mood-board-ahmedabad-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20186
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/interior-mood-board-ahmedabad-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 43168
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/interior-mood-board-ahmedabad-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 83378
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/interior-mood-board-ahmedabad-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 153636
+        }
+      ]
+    },
+    {
+      "folder": "services/space-planning-design-consultation",
+      "name": "paint-colour-chart-sketch",
+      "alt": "Paint colour chart and patterned tile beside a watercolour sketchbook",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/paint-colour-chart-sketch-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 13090
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/paint-colour-chart-sketch-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 24716
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/paint-colour-chart-sketch-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 44272
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/paint-colour-chart-sketch-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 82374
+        }
+      ]
+    },
+    {
+      "folder": "services/space-planning-design-consultation",
+      "name": "open-plan-living-dining",
+      "alt": "Open-plan living and dining room with a grey sofa and marble coffee table",
+      "width": 1920,
+      "height": 1295,
+      "sizes": [
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-dining-480.webp",
+          "width": 480,
+          "height": 323,
+          "bytes": 19124
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-dining-768.webp",
+          "width": 768,
+          "height": 518,
+          "bytes": 42492
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-dining-1280.webp",
+          "width": 1280,
+          "height": 863,
+          "bytes": 86802
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-dining-1920.webp",
+          "width": 1920,
+          "height": 1295,
+          "bytes": 164110
+        }
+      ]
+    },
+    {
+      "folder": "services/space-planning-design-consultation",
+      "name": "open-plan-living-kitchen-balcony",
+      "alt": "Compact open-plan living room with a kitchen wall and sliding doors to a balcony",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-kitchen-balcony-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17430
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-kitchen-balcony-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 39066
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-kitchen-balcony-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 85722
+        },
+        {
+          "file": "/assets/img/services/space-planning-design-consultation/open-plan-living-kitchen-balcony-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 167324
+        }
+      ]
+    },
+    {
+      "folder": "projects/modern-3bhk-sg-highway",
+      "name": "3bhk-living-room-slatted-wall",
+      "alt": "Living room with a boucle sofa, slatted oak TV wall and floating shelves",
+      "width": 1920,
+      "height": 1097,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-480.webp",
+          "width": 480,
+          "height": 274,
+          "bytes": 10024
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-768.webp",
+          "width": 768,
+          "height": 438,
+          "bytes": 24534
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-1280.webp",
+          "width": 1280,
+          "height": 731,
+          "bytes": 59328
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-slatted-wall-1920.webp",
+          "width": 1920,
+          "height": 1097,
+          "bytes": 139382
+        }
+      ]
+    },
+    {
+      "folder": "projects/modern-3bhk-sg-highway",
+      "name": "3bhk-kitchen-living-timber-wall",
+      "alt": "Open kitchen and living area with a solid wood table and a reclaimed timber feature wall",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-kitchen-living-timber-wall-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17664
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-kitchen-living-timber-wall-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 35580
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-kitchen-living-timber-wall-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 63580
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-kitchen-living-timber-wall-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 109952
+        }
+      ]
+    },
+    {
+      "folder": "projects/modern-3bhk-sg-highway",
+      "name": "3bhk-entrance-walnut-kitchen",
+      "alt": "Apartment entrance hall opening onto a walnut kitchen and living room",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-entrance-walnut-kitchen-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 14142
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-entrance-walnut-kitchen-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 30792
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-entrance-walnut-kitchen-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 60228
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-entrance-walnut-kitchen-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 118346
+        }
+      ]
+    },
+    {
+      "folder": "projects/modern-3bhk-sg-highway",
+      "name": "3bhk-living-room-oak-kitchen",
+      "alt": "Living room with a leather sofa facing an oak kitchen and shelving",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-oak-kitchen-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12704
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-oak-kitchen-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 26338
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-oak-kitchen-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 50152
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-living-room-oak-kitchen-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 93538
+        }
+      ]
+    },
+    {
+      "folder": "projects/modern-3bhk-sg-highway",
+      "name": "3bhk-walnut-kitchen",
+      "alt": "Compact walnut kitchen with under-cabinet lighting beside the entrance",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-walnut-kitchen-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 9038
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-walnut-kitchen-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 19576
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-walnut-kitchen-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 39806
+        },
+        {
+          "file": "/assets/img/projects/modern-3bhk-sg-highway/3bhk-walnut-kitchen-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 79398
+        }
+      ]
+    },
+    {
+      "folder": "projects/luxury-bungalow-bodakdev",
+      "name": "bungalow-living-room-arch",
+      "alt": "Bungalow living room seen through a wide arch, with timber beams and a terracotta floor",
+      "width": 1920,
+      "height": 1440,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 13660
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-768.webp",
+          "width": 768,
+          "height": 576,
+          "bytes": 29484
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-1280.webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 59100
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-living-room-arch-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 113456
+        }
+      ]
+    },
+    {
+      "folder": "projects/luxury-bungalow-bodakdev",
+      "name": "bungalow-double-height-living",
+      "alt": "Double-height living room with a white sofa, slatted wood wall and garden courtyard",
+      "width": 1920,
+      "height": 1080,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 14146
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-768.webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 29948
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 60370
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-double-height-living-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 136026
+        }
+      ]
+    },
+    {
+      "folder": "projects/luxury-bungalow-bodakdev",
+      "name": "bungalow-marble-living-room",
+      "alt": "Long marble-floored living room with sliding glass doors to the garden",
+      "width": 1920,
+      "height": 1440,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-marble-living-room-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 22978
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-marble-living-room-768.webp",
+          "width": 768,
+          "height": 576,
+          "bytes": 49134
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-marble-living-room-1280.webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 100202
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-marble-living-room-1920.webp",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 183528
+        }
+      ]
+    },
+    {
+      "folder": "projects/luxury-bungalow-bodakdev",
+      "name": "bungalow-bedroom-stone-wall",
+      "alt": "Bedroom with a stone feature wall, timber ceiling and solid wood bed",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-bedroom-stone-wall-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 30528
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-bedroom-stone-wall-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 74026
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-bedroom-stone-wall-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 166746
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-bedroom-stone-wall-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 338306
+        }
+      ]
+    },
+    {
+      "folder": "projects/luxury-bungalow-bodakdev",
+      "name": "bungalow-dining-garden-view",
+      "alt": "Dining area with an oak table and full-height windows onto a garden",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19928
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 43878
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 85884
+        },
+        {
+          "file": "/assets/img/projects/luxury-bungalow-bodakdev/bungalow-dining-garden-view-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 157726
+        }
+      ]
+    },
+    {
+      "folder": "projects/corporate-office-ahmedabad",
+      "name": "office-reception-walnut",
+      "alt": "Office reception counter in walnut laminate with planters",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 13974
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 28700
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 52488
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-reception-walnut-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 92086
+        }
+      ]
+    },
+    {
+      "folder": "projects/corporate-office-ahmedabad",
+      "name": "office-conference-room-oak",
+      "alt": "Glass-walled conference room with an oak table and wood-backed chairs",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19220
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 38866
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 72636
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-conference-room-oak-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 127914
+        }
+      ]
+    },
+    {
+      "folder": "projects/corporate-office-ahmedabad",
+      "name": "office-open-workspace",
+      "alt": "Open workspace with oak desks, task chairs and a felt-disc ceiling feature",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-open-workspace-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 29994
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-open-workspace-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 66086
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-open-workspace-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 136572
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-open-workspace-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 250942
+        }
+      ]
+    },
+    {
+      "folder": "projects/corporate-office-ahmedabad",
+      "name": "office-meeting-room-walnut",
+      "alt": "Meeting room with a walnut table and black leather chairs",
+      "width": 1920,
+      "height": 1080,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-meeting-room-walnut-480.webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 12594
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-meeting-room-walnut-768.webp",
+          "width": 768,
+          "height": 432,
+          "bytes": 26794
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-meeting-room-walnut-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 52870
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-meeting-room-walnut-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 97980
+        }
+      ]
+    },
+    {
+      "folder": "projects/corporate-office-ahmedabad",
+      "name": "office-workstations-planters",
+      "alt": "Workstation area with maple panels and planter-topped partitions",
+      "width": 1920,
+      "height": 1290,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-workstations-planters-480.webp",
+          "width": 480,
+          "height": 322,
+          "bytes": 14652
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-workstations-planters-768.webp",
+          "width": 768,
+          "height": 516,
+          "bytes": 32272
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-workstations-planters-1280.webp",
+          "width": 1280,
+          "height": 860,
+          "bytes": 66446
+        },
+        {
+          "file": "/assets/img/projects/corporate-office-ahmedabad/office-workstations-planters-1920.webp",
+          "width": 1920,
+          "height": 1290,
+          "bytes": 130940
+        }
+      ]
+    },
+    {
+      "folder": "projects/retail-showroom-ahmedabad",
+      "name": "retail-furniture-showroom",
+      "alt": "Furniture showroom with a styled bed, sofa set and dining display under track lighting",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-furniture-showroom-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20872
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-furniture-showroom-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 41886
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-furniture-showroom-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 80088
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-furniture-showroom-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 142700
+        }
+      ]
+    },
+    {
+      "folder": "projects/retail-showroom-ahmedabad",
+      "name": "showroom-lounge-display",
+      "alt": "Showroom lounge with teal and magenta armchairs and an oak wardrobe display",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-lounge-display-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23692
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-lounge-display-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 52444
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-lounge-display-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 109506
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-lounge-display-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 216574
+        }
+      ]
+    },
+    {
+      "folder": "projects/retail-showroom-ahmedabad",
+      "name": "showroom-carved-wood-cabinets",
+      "alt": "Antique furniture gallery lined with carved wooden cabinets",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-carved-wood-cabinets-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 24684
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-carved-wood-cabinets-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 53498
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-carved-wood-cabinets-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 106462
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/showroom-carved-wood-cabinets-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 199470
+        }
+      ]
+    },
+    {
+      "folder": "projects/retail-showroom-ahmedabad",
+      "name": "retail-boutique-oak-floor",
+      "alt": "Clothing boutique with oak floors, garment rails and a display table",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-boutique-oak-floor-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23348
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-boutique-oak-floor-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 46562
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-boutique-oak-floor-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 79438
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-boutique-oak-floor-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 129732
+        }
+      ]
+    },
+    {
+      "folder": "projects/retail-showroom-ahmedabad",
+      "name": "retail-shopfront-timber-slats",
+      "alt": "Shopfront window with a vertical timber slat backdrop and mannequins",
+      "width": 1920,
+      "height": 1315,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-shopfront-timber-slats-480.webp",
+          "width": 480,
+          "height": 329,
+          "bytes": 17654
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-shopfront-timber-slats-768.webp",
+          "width": 768,
+          "height": 526,
+          "bytes": 33676
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-shopfront-timber-slats-1280.webp",
+          "width": 1280,
+          "height": 877,
+          "bytes": 59686
+        },
+        {
+          "file": "/assets/img/projects/retail-showroom-ahmedabad/retail-shopfront-timber-slats-1920.webp",
+          "width": 1920,
+          "height": 1315,
+          "bytes": 104580
+        }
+      ]
+    },
+    {
+      "folder": "projects/modular-kitchen-wardrobe",
+      "name": "kitchen-knotty-pine-island",
+      "alt": "Rustic kitchen with knotty pine cabinets, timber posts and a breakfast bar",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-knotty-pine-island-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19756
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-knotty-pine-island-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 42054
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-knotty-pine-island-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 83416
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-knotty-pine-island-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 156384
+        }
+      ]
+    },
+    {
+      "folder": "projects/modular-kitchen-wardrobe",
+      "name": "kitchen-oak-island-table",
+      "alt": "Kitchen with an oak island table, bar stools and white tall units",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19678
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 42350
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 90332
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-oak-island-table-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 181886
+        }
+      ]
+    },
+    {
+      "folder": "projects/modular-kitchen-wardrobe",
+      "name": "kitchen-walnut-breakfast-counter",
+      "alt": "Compact kitchen with a walnut breakfast counter and open display shelves",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-walnut-breakfast-counter-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12622
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-walnut-breakfast-counter-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 27290
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-walnut-breakfast-counter-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 57734
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/kitchen-walnut-breakfast-counter-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 115682
+        }
+      ]
+    },
+    {
+      "folder": "projects/modular-kitchen-wardrobe",
+      "name": "walk-in-wardrobe-oak",
+      "alt": "Walk-in wardrobe lined with oak shelving and a central drawer unit",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-oak-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 15842
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-oak-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 32202
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-oak-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 60476
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-oak-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 111256
+        }
+      ]
+    },
+    {
+      "folder": "projects/modular-kitchen-wardrobe",
+      "name": "walk-in-wardrobe-led-lighting",
+      "alt": "Walk-in wardrobe in light walnut with LED-lit hanging rails",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-led-lighting-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16782
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-led-lighting-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 33962
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-led-lighting-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 65654
+        },
+        {
+          "file": "/assets/img/projects/modular-kitchen-wardrobe/walk-in-wardrobe-led-lighting-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 123066
+        }
+      ]
+    },
+    {
+      "folder": "projects/minimal-2bhk-home",
+      "name": "minimal-living-room-cream-sofa",
+      "alt": "Minimal living room with a cream chaise sofa, grey rug and herringbone floor",
+      "width": 1920,
+      "height": 1280,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 13220
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-768.webp",
+          "width": 768,
+          "height": 512,
+          "bytes": 29524
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-1280.webp",
+          "width": 1280,
+          "height": 853,
+          "bytes": 63150
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-room-cream-sofa-1920.webp",
+          "width": 1920,
+          "height": 1280,
+          "bytes": 128050
+        }
+      ]
+    },
+    {
+      "folder": "projects/minimal-2bhk-home",
+      "name": "minimal-living-walnut-media-wall",
+      "alt": "Living room with a full-height walnut media wall and a beige sectional sofa",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-walnut-media-wall-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 11882
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-walnut-media-wall-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 24396
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-walnut-media-wall-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 45758
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-walnut-media-wall-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 86664
+        }
+      ]
+    },
+    {
+      "folder": "projects/minimal-2bhk-home",
+      "name": "minimal-living-mocha-tv-panel",
+      "alt": "Narrow living room with a mocha TV panel, low storage and cove lighting",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-mocha-tv-panel-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 12656
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-mocha-tv-panel-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 27866
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-mocha-tv-panel-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 61718
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-mocha-tv-panel-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 131854
+        }
+      ]
+    },
+    {
+      "folder": "projects/minimal-2bhk-home",
+      "name": "minimal-living-dining-taupe",
+      "alt": "Living room opening to a dining area and kitchen, finished in taupe and wood",
+      "width": 1920,
+      "height": 1282,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-dining-taupe-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 10216
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-dining-taupe-768.webp",
+          "width": 768,
+          "height": 513,
+          "bytes": 21734
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-dining-taupe-1280.webp",
+          "width": 1280,
+          "height": 854,
+          "bytes": 50598
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-dining-taupe-1920.webp",
+          "width": 1920,
+          "height": 1282,
+          "bytes": 114484
+        }
+      ]
+    },
+    {
+      "folder": "projects/minimal-2bhk-home",
+      "name": "minimal-living-globe-pendant",
+      "alt": "Bright minimal living room with a pale sectional sofa and globe pendant",
+      "width": 1920,
+      "height": 1066,
+      "sizes": [
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-globe-pendant-480.webp",
+          "width": 480,
+          "height": 266,
+          "bytes": 7420
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-globe-pendant-768.webp",
+          "width": 768,
+          "height": 426,
+          "bytes": 15770
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-globe-pendant-1280.webp",
+          "width": 1280,
+          "height": 711,
+          "bytes": 33396
+        },
+        {
+          "file": "/assets/img/projects/minimal-2bhk-home/minimal-living-globe-pendant-1920.webp",
+          "width": 1920,
+          "height": 1066,
+          "bytes": 71078
+        }
+      ]
+    },
+    {
+      "folder": "hero",
+      "name": "hero-living-room-poster",
+      "alt": "Living room with walnut wall panelling, a cream sofa and a low wooden table",
+      "width": 1920,
+      "height": 1080,
+      "sizes": [
+        {
+          "file": "/assets/img/hero/hero-living-room-poster-1280.webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 33418
+        },
+        {
+          "file": "/assets/img/hero/hero-living-room-poster-1920.webp",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 54320
+        }
+      ],
+      "video": {
+        "files": [
+          {
+            "file": "/assets/video/hero-living-room-1280x720.mp4",
+            "bytes": 1588138,
+            "width": 1280,
+            "height": 720,
+            "type": "video/mp4"
+          },
+          {
+            "file": "/assets/video/hero-living-room-1280x720.webm",
+            "bytes": 652121,
+            "width": 1280,
+            "height": 720,
+            "type": "video/webm"
+          },
+          {
+            "file": "/assets/video/hero-living-room-1920x1080.mp4",
+            "bytes": 5220490,
+            "width": 1920,
+            "height": 1080,
+            "type": "video/mp4"
+          },
+          {
+            "file": "/assets/video/hero-living-room-1920x1080.webm",
+            "bytes": 1665808,
+            "width": 1920,
+            "height": 1080,
+            "type": "video/webm"
+          }
+        ],
+        "duration": 12.5,
+        "muted": true,
+        "loop": true
+      }
+    }
+  ]
+}
